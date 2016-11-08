@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
     <head>
         <title>Vue インスタンス - vue.js</title>
         <meta charset="utf-8">
         <meta name="description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Dosis:300,500&text=Vue.js' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Dosis:300,500&text=Vue.js' rel='stylesheet' type='text/css'>
+        <link href="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" rel='stylesheet' type='text/css'>
         <link rel="icon" href="/images/logo.png" type="image/x-icon">
         <script>
             window.PAGE_TYPE = "guide"
         </script>
-        <link rel="stylesheet" href="/css/page.css" type="text/css">
+        <link rel="stylesheet" href="/css/page.css">
         <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -38,7 +39,7 @@
     <ul id="nav">
         <li>
   <form id="search-form">
-    <input type="text" id="search-query" class="st-default-search-input">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
   </form>
 </li>
 <li><a href="/guide/" class="nav-link current">ガイド</a></li>
@@ -58,6 +59,7 @@
 
     </ul>
 </div>
+
             <div id="main">
                 
                     
@@ -65,7 +67,7 @@
     <ul class="main-menu">
         <li>
   <form id="search-form">
-    <input type="text" id="search-query" class="st-default-search-input">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
   </form>
 </li>
 <li><a href="/guide/" class="nav-link current">ガイド</a></li>
@@ -85,13 +87,20 @@
 
     </ul>
     <div class="list">
+        <div id="donate" style="margin-bottom: 20px">
+            <span class="wrapper" style="width: 110px">
+              <img src="/images/patreon.png">
+              <a href="/support-vuejs">Support Vue.js</a>
+            </span>
+        </div>
         <h2>
         
         ガイド
         
         <select class="version-select">
-            <option selected>1.0</option>
-            <option>0.12</option>
+            <option value="">2.0</option>
+            <option selected value="SELF">1.0</option>
+            <option value="012">0.12</option>
         </select>
         </h2>
         <ul class="menu-root">
@@ -176,33 +185,38 @@
                     <a href="/guide/comparison.html" class="sidebar-link">他のフレームワークとの比較</a>
                 </li>
             
+                <li>
+                    <a href="/guide/join.html" class="sidebar-link">Vue コミュニティへ参加しましょう！</a>
+                </li>
+            
         </ul>
     </div>
 </div>
 
 
 <div class="content guide with-sidebar">
-    <h1>Vue インスタンス</h1>
     <div id="ad">
-        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs" id="_carbonads_js"></script>
-    </div>
-    <h2 id="コンストラクタ">コンストラクタ</h2><p>全ての Vue.js アプリケーションは <code>Vue</code> コンストラクタ関数で <strong>root な Vue インスタンス</strong> を作成することによってブートストラップされます:</p>
+  <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs" id="_carbonads_js"></script>
+</div>
+
+    <h1>Vue インスタンス</h1>
+    <h2 id="コンストラクタ"><a href="#コンストラクタ" class="headerlink" title="コンストラクタ"></a>コンストラクタ</h2><p>全ての Vue.js アプリケーションは <code>Vue</code> コンストラクタ関数で <strong>root な Vue インスタンス</strong> を作成することによって自動起動されます:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  <span class="comment">// オプション</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>Vue インスタンスは本質的には <a href="https://en.wikipedia.org/wiki/Model_View_ViewModel" target="_blank" rel="external">MVVM パターン</a>で定義されている <strong>ViweModel</strong> で、したがって変数名 <code>vm</code> はドキュメントのいたるところで確認するでしょう。</p>
-<p>Vue インスタンスをインスタンス化するとき、データに対して、テンプレート、マウントするための要素、メソッド、ライフサイクルコールバック、そしてもっと様ざまなオプションを含んだ <strong>オプションオブジェクト</strong> で伝達する必要があります。完全なオプションのリストは、API で見つけることができます。</p>
-<p><code>Vue</code> コンストラクタは事前定義されたオプションで再利用可能な <strong>コンポーネントコンストラクタ</strong> を作成するために拡張することができます:</p>
+<p>Vue インスタンスは本質的には <a href="https://ja.wikipedia.org/wiki/Model_View_ViewModel" target="_blank" rel="external">MVVM パターン</a>で定義されている <strong>ViewModel</strong> で、したがって変数名 <code>vm</code> はドキュメントのいたるところに出てくるでしょう。</p>
+<p>Vue インスタンスをインスタンス化するとき、データに対して、テンプレートや、マウントするための要素や、メソッド、ライフサイクルコールバックなどのオプションを含んだ <strong>オプションオブジェクト</strong> で伝達する必要があります。完全なオプションのリストは、<a href="/api">API</a> にあります。</p>
+<p><code>Vue</code> コンストラクタは、事前定義されたオプションを使って、再利用可能な <strong>コンポーネントコンストラクタ</strong> を作成するために拡張できます:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> MyComponent = Vue.extend(&#123;</span><br><span class="line">  <span class="comment">// 拡張オプション</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// `MyComponent` の全てのインスタンスは</span></span><br><span class="line"><span class="comment">// 事前定義されたオプションで作成される</span></span><br><span class="line"><span class="keyword">var</span> myComponentInstance = <span class="keyword">new</span> MyComponent()</span><br></pre></td></tr></table></figure>
-<p>命令的に拡張されたインスタンスを作成することができますが、ほとんどの場合はカスタム要素としてコンポーネントコンストラクタが登録されていることによって宣言的なテンプレートでそれらを構成することができます。後でコンポーネントシステムの詳細についてお話します。今のところ、全ての Vue.js コンポーネントは本質的には拡張された Vue インスタンスを知っている必要があります。</p>
-<h2 id="プロパティとメソッド">プロパティとメソッド</h2><p>各 Vue インスタンスが<strong>プロキシ</strong>する全てのプロパティは <code>data</code> オブジェクトで見つけられます:</p>
+<p>命令的に拡張されたインスタンスを作成することができますが、ほとんどの場合、宣言的にカスタム要素としてコンポーネントコンストラクタを登録し、それらをテンプレート内に組み立てることができます。コンポーネントシステムについてはあとで詳しく説明します。今の時点であなたが知っておくべきことは、全ての Vue.js コンポーネントは本質的には拡張された Vue インスタンス、ということです。</p>
+<h2 id="プロパティとメソッド"><a href="#プロパティとメソッド" class="headerlink" title="プロパティとメソッド"></a>プロパティとメソッド</h2><p>各 Vue インスタンスが<strong>プロキシ (proxy)</strong> する全てのプロパティは <code>data</code> オブジェクト内にあります:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> data = &#123; a: <span class="number">1</span> &#125;</span><br><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: data</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">vm.a === data.a <span class="comment">// -&gt; true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// プロパティ設定は、元のデータに影響を与える </span></span><br><span class="line">vm.a = <span class="number">2</span></span><br><span class="line">data.a <span class="comment">// -&gt; 2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// ... そしてその逆</span></span><br><span class="line">data.a = <span class="number">3</span></span><br><span class="line">vm.a <span class="comment">// -&gt; 3</span></span><br></pre></td></tr></table></figure>
-<p>これらプロキシされたプロパティのみ<strong>リアクティブ</strong>であるということに注意すべきです。インスタンスが作成された後、そのインスタンスに新しいプロパティをアタッチする場合、任意の View の更新をトリガしません。</p>
-<p>データのプロパティに加えて、Vue インスタンスはいくつかの役立つインスタンスプロパティとメソッドを公開します。これらプロパティとメソッドはプロキシされたデータプロパティと区別するために<code>$</code> で接頭されます。例えば:</p>
+<p>これらのプロキシされたプロパティのみ<strong>リアクティブ (reactive)</strong> になるということに注意すべきです。インスタンスが作成された後、そのインスタンスに新しいプロパティを付けても、View の更新はトリガされません。</p>
+<p>データのプロパティに加えて、Vue インスタンスはいくつかの役立つインスタンスプロパティとメソッドを持っています。これらプロパティとメソッドはプロキシされたデータプロパティと区別するために、<code>$</code> が接頭されます。例えば:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> data = &#123; a: <span class="number">1</span> &#125;</span><br><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#example'</span>,</span><br><span class="line">  data: data</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">vm.$data === data <span class="comment">// -&gt; true</span></span><br><span class="line">vm.$el === <span class="built_in">document</span>.getElementById(<span class="string">'example'</span>) <span class="comment">// -&gt; true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// $watch はインスタンスメソッド</span></span><br><span class="line">vm.$watch(<span class="string">'a'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">newVal, oldVal</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// このコールバックは `vm.a` が変更するとき呼ばれる</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>インスタンスプロパティとメソッドの完全なリストについては、API を参考にしてください。</p>
-<h2 id="インスタンスライフサイクル">インスタンスライフサイクル</h2><p>インスタンスが作成されるとき、各 Vue インスタンスは、一連の初期化ステップを経ます。例えば、テンプレートのコンパイル、そして必要なデータバインディングを作成したりと、データ監視のセットアップを必要とします。その一連の初期化ステップのさなか、私達にカスタムロジックを実行するための機会を与えるような、いくつかの<strong>ライフサイクルフック</strong>を起動します。例えば、<code>created</code> フックはインスタンスが作成された後に呼ばれます:</p>
+<p>インスタンスプロパティとメソッドの完全なリストについては、<a href="/api">API</a> を参考にしてください。</p>
+<h2 id="インスタンスライフサイクル"><a href="#インスタンスライフサイクル" class="headerlink" title="インスタンスライフサイクル"></a>インスタンスライフサイクル</h2><p>インスタンスが作成されるとき、各 Vue インスタンスは、一連の初期化ステップを行ないます。例として、データ監視のセットアップやテンプレートのコンパイル、必要なデータバインディングの作成などがあります。一連の初期化ステップにおいて、カスタムロジックの実行を可能にする、いくつかの<strong>ライフサイクルフック</strong>が起動されます。例えば、<code>created</code> フックはインスタンスが作成された後に呼ばれます:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    a: <span class="number">1</span></span><br><span class="line">  &#125;,</span><br><span class="line">  created: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// `this` は vm インスタンスを指します</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'a is: '</span> + <span class="keyword">this</span>.a)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// -&gt; "a is: 1"</span></span><br></pre></td></tr></table></figure>
-<p>インスタンスのライフサイクルの様ざまな段階で呼ばれる他のフックもあります。例えば、<code>compiled</code>、<code>ready</code>、そして <code>destroyed</code> があります。全てのライフサイクルフックは <code>this</code> コンテキストは Vue インスタンスを起動しているそれを指して呼ばれています。一部のユーザーは、Vue.js の世界で “controller” の概念を知りたいと思うかもしれないですが、その答えは Vue.js には controller はないです。コンポーネント向けのカスタムロジックはこれらのライフサイクルの中で分割されることになります。</p>
-<h2 id="ライフサイクルダイアグラム">ライフサイクルダイアグラム</h2><p>以下はインスタンスライフサイクルに対するダイアグラムです。今、完全に全て理解する必要はありませんが、このダイアグラムは将来役立つでしょう。</p>
+<p>インスタンスのライフサイクルの様ざまな段階で呼ばれる他のフックもあります。例えば、<code>compiled</code>、<code>ready</code>、そして <code>destroyed</code> などがあります。全てのライフサイクルフックは Vue インスタンスを指し示す <code>this</code> と共に呼ばれます。Vue.js の世界における “controller” の概念を知りたいと思うユーザーもいるかもしれません、ですが「Vue.js には controller はない」というのが答えです。コンポーネント向けのカスタムロジックはこれらのライフサイクルフックの中で分割されることになります。</p>
+<h2 id="ライフサイクルダイアグラム"><a href="#ライフサイクルダイアグラム" class="headerlink" title="ライフサイクルダイアグラム"></a>ライフサイクルダイアグラム</h2><p>以下はインスタンスライフサイクルに対するダイアグラムです。この段階で、全てを理解する必要はありませんが、このダイアグラムは将来役に立つでしょう。</p>
 <p><img src="/images/lifecycle.png" alt="Lifecycle"></p>
 
     
@@ -215,16 +229,17 @@
         
       </div>
     
-    <div class="footer">間違いを見つけた、またはドキュメントに貢献したいですか？<a href="https://github.com/vuejs-jp/jp.vuejs.org" target="_blank">Github からこのサイトを Fork しましょう</a>！</div>
+    <div class="footer">間違いを見つけた、またはドキュメントに貢献したいですか？<a href="https://github.com/vuejs/jp.vuejs.org/blob/lang-ja/src/guide/instance.md" target="_blank">Github 上でこのページを編集する</a> か、<a href="https://github.com/vuejs/jp.vuejs.org" target="_blank">Github からこのサイトを Fork してプルリクエストしましょう</a>！</div>
 </div>
 
                 
             </div>
+            <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
             <script src="/js/smooth-scroll.min.js"></script>
             <script src="/js/common.js"></script>
         
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 FastClick.attach(document.body);

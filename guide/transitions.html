@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
     <head>
         <title>トランジション - vue.js</title>
         <meta charset="utf-8">
         <meta name="description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Dosis:300,500&text=Vue.js' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Dosis:300,500&text=Vue.js' rel='stylesheet' type='text/css'>
+        <link href="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" rel='stylesheet' type='text/css'>
         <link rel="icon" href="/images/logo.png" type="image/x-icon">
         <script>
             window.PAGE_TYPE = "guide"
         </script>
-        <link rel="stylesheet" href="/css/page.css" type="text/css">
+        <link rel="stylesheet" href="/css/page.css">
         <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -38,7 +39,7 @@
     <ul id="nav">
         <li>
   <form id="search-form">
-    <input type="text" id="search-query" class="st-default-search-input">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
   </form>
 </li>
 <li><a href="/guide/" class="nav-link current">ガイド</a></li>
@@ -58,6 +59,7 @@
 
     </ul>
 </div>
+
             <div id="main">
                 
                     
@@ -65,7 +67,7 @@
     <ul class="main-menu">
         <li>
   <form id="search-form">
-    <input type="text" id="search-query" class="st-default-search-input">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
   </form>
 </li>
 <li><a href="/guide/" class="nav-link current">ガイド</a></li>
@@ -85,13 +87,20 @@
 
     </ul>
     <div class="list">
+        <div id="donate" style="margin-bottom: 20px">
+            <span class="wrapper" style="width: 110px">
+              <img src="/images/patreon.png">
+              <a href="/support-vuejs">Support Vue.js</a>
+            </span>
+        </div>
         <h2>
         
         ガイド
         
         <select class="version-select">
-            <option selected>1.0</option>
-            <option>0.12</option>
+            <option value="">2.0</option>
+            <option selected value="SELF">1.0</option>
+            <option value="012">0.12</option>
         </select>
         </h2>
         <ul class="menu-root">
@@ -176,25 +185,30 @@
                     <a href="/guide/comparison.html" class="sidebar-link">他のフレームワークとの比較</a>
                 </li>
             
+                <li>
+                    <a href="/guide/join.html" class="sidebar-link">Vue コミュニティへ参加しましょう！</a>
+                </li>
+            
         </ul>
     </div>
 </div>
 
 
 <div class="content guide with-sidebar">
-    <h1>トランジション</h1>
     <div id="ad">
-        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs" id="_carbonads_js"></script>
-    </div>
+  <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs" id="_carbonads_js"></script>
+</div>
+
+    <h1>トランジション</h1>
     <p>Vue.js のトランジション (Transition) システムを使用すると、DOM から要素を取得したり削除するといったトランジションエフェクトを自動的に適用できます。Vue.js は自動的に、適切な時に、あなたのために CSS トランジションまたはアニメーションをトリガするため、CSS クラスを追加または削除し、そしてトランジションの間は、カスタム DOM の操作をするために、JavaScript フック関数を提供することができます。</p>
 <p>トランジションエフェクトを適用するために、対象要素で特別な <code>transition</code> 属性を使用する必要があります:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-if</span>=<span class="value">"show"</span> <span class="attribute">transition</span>=<span class="value">"my-transition"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-if</span>=<span class="string">"show"</span> <span class="attr">transition</span>=<span class="string">"my-transition"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p><code>transition</code> 属性は以下と一緒に使用することができます:</p>
 <ul>
 <li><code>v-if</code></li>
 <li><code>v-show</code></li>
-<li><code>v-for</code> (挿入および削除のみに対するトリガ)</li>
-<li>動的コンポーネント(<a href="components.html#Dynamic_Components">次のセクション</a>で導入)</li>
+<li><code>v-for</code> (挿入および削除のみに対するトリガ、アニメーション順序の変更には、<a href="https://github.com/vuejs/vue-animated-list" target="_blank" rel="external">vue-animated-list プラグインを使用する</a>)</li>
+<li>動的コンポーネント(<a href="components.html#動的コンポーネント">次のセクション</a>で導入)</li>
 <li>コンポーネントのルートノード、そして Vue インスタンス の DOM メソッド経由によるトリガ(例、<code>vm.$appendTo(el)</code>)</li>
 </ul>
 <p>トランジションを持つ要素が挿入または削除されるとき、Vue は以下となります:</p>
@@ -207,10 +221,13 @@
 <li><p>JavaScript フックが何も提供されず、CSS トランジション/アニメーションが何も検出されない場合、DOM オペレーション (挿入/削除) は次のフレームで直ちに実行されます。</p>
 </li>
 </ol>
-<h2 id="CSS_トランジション">CSS トランジション</h2><h3 id="例">例</h3><p>基本的な CSS トランジションは、次のようになります。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-if</span>=<span class="value">"show"</span> <span class="attribute">transition</span>=<span class="value">"expand"</span>&gt;</span>hello<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="CSS-トランジション"><a href="#CSS-トランジション" class="headerlink" title="CSS トランジション"></a>CSS トランジション</h2><h3 id="例"><a href="#例" class="headerlink" title="例"></a>例</h3><p>基本的な CSS トランジションは、次のようになります。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-if</span>=<span class="string">"show"</span> <span class="attr">transition</span>=<span class="string">"expand"</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>また <code>.expand-transition</code>クラス、<code>.expand-enter</code> クラスそして <code>.expand-leave</code> クラスの CSS ルールを定義する必要があります。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 常に表示 */</span></span><br><span class="line"><span class="class">.expand-transition</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">transition</span>:<span class="value"> all .<span class="number">3s</span> ease</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">30px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">10px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">background-color</span>:<span class="value"> <span class="hexcolor">#eee</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* .expand-enter は entering に対する開始状態を定義 */</span></span><br><span class="line"><span class="comment">/* .expand-leave は leaving に対する終了状態を定義 */</span></span><br><span class="line"><span class="class">.expand-enter</span>, <span class="class">.expand-leave</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">0</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">0</span> <span class="number">10px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">opacity</span>:<span class="value"> <span class="number">0</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 常に表示 */</span></span><br><span class="line"><span class="selector-class">.expand-transition</span> &#123;</span><br><span class="line">  <span class="attribute">transition</span>: all .<span class="number">3s</span> ease;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">30px</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#eee</span>;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* .expand-enter は entering に対する開始状態を定義 */</span></span><br><span class="line"><span class="comment">/* .expand-leave は leaving に対する終了状態を定義 */</span></span><br><span class="line"><span class="selector-class">.expand-enter</span>, <span class="selector-class">.expand-leave</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>動的なバインディングを使用することによって、同じ要素で異なるトランジションを実現することができます:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-if</span>=<span class="string">"show"</span> <span class="attr">:transition</span>=<span class="string">"transitionName"</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'...'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    show: <span class="literal">false</span>,</span><br><span class="line">    transitionName: <span class="string">'fade'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>加えて、JavaScript フックを提供できます。</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.transition(<span class="string">'expand'</span>, &#123;</span><br><span class="line">  beforeEnter: <span class="function"><span class="keyword">function</span> (<span class="params">el</span>) </span>&#123;</span><br><span class="line">    el.textContent = <span class="string">'beforeEnter'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  enter: <span class="function"><span class="keyword">function</span> (<span class="params">el</span>) </span>&#123;</span><br><span class="line">    el.textContent = <span class="string">'enter'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  afterEnter: <span class="function"><span class="keyword">function</span> (<span class="params">el</span>) </span>&#123;</span><br><span class="line">    el.textContent = <span class="string">'afterEnter'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  enterCancelled: <span class="function"><span class="keyword">function</span> (<span class="params">el</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 取り消しハンドル</span></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  beforeLeave: <span class="function"><span class="keyword">function</span> (<span class="params">el</span>) </span>&#123;</span><br><span class="line">    el.textContent = <span class="string">'beforeLeave'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  leave: <span class="function"><span class="keyword">function</span> (<span class="params">el</span>) </span>&#123;</span><br><span class="line">    el.textContent = <span class="string">'leave'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  afterLeave: <span class="function"><span class="keyword">function</span> (<span class="params">el</span>) </span>&#123;</span><br><span class="line">    el.textContent = <span class="string">'afterLeave'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  leaveCancelled: <span class="function"><span class="keyword">function</span> (<span class="params">el</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 取り消しハンドル</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
@@ -266,17 +283,28 @@ new Vue({
 })
 </script>
 
-<h3 id="トランジション_CSS_クラス">トランジション CSS クラス</h3><p>追加とトグルするクラス名の接頭辞は、<code>transition</code> 属性の値に基づきます。<code>transition=&quot;fade&quot;</code> のケースでは、 3 つの CSS クラスが関与しています:</p>
+<h3 id="トランジション-CSS-クラス"><a href="#トランジション-CSS-クラス" class="headerlink" title="トランジション CSS クラス"></a>トランジション CSS クラス</h3><p>追加とトグルするクラス名の接頭辞は、<code>transition</code> 属性の値に基づきます。<code>transition=&quot;fade&quot;</code> のケースでは、 3 つの CSS クラスが関与しています:</p>
 <ol>
 <li><p><code>.fade-transition</code> クラスは常に与えられます。</p>
 </li>
 <li><p><code>.fade-enter</code> は、entering transition (トランジションに入っている)の開始状態を定義します。単一のフレームに適用した後に、すぐに削除されます。</p>
 </li>
-<li><p><code>.fade-enter</code> は、leaving transition (トランジションから離れている)の終了状態を定義します。leaving transition が開始するときに適用され、トランジションが終了するときに削除されます。</p>
+<li><p><code>.fade-leave</code> は、leaving transition (トランジションから離れている)の終了状態を定義します。leaving transition が開始するときに適用され、トランジションが終了するときに削除されます。</p>
 </li>
 </ol>
 <p><code>transition</code> が値を持たいない場合は、クラスはデフォルトで <code>.v-transition</code> 、<code>.v-enter</code> そして <code>v-leave</code> になります。</p>
-<h3 id="トランジションフローの詳細">トランジションフローの詳細</h3><p><code>show</code> プロパティに変更があると、それに応じて Vue.js は <code>&lt;div&gt;</code> 要素を追加/削除し、以下に指定されているようにトランジションクラスを適用します。</p>
+<h3 id="カスタムトランジションクラス"><a href="#カスタムトランジションクラス" class="headerlink" title="カスタムトランジションクラス"></a>カスタムトランジションクラス</h3><blockquote>
+<p>1.0.14 で新規追加</p>
+</blockquote>
+<p>トランジション定義でカスタムな <code>enterClass</code> と <code>leaveClass</code> を指定できます。これらは従来型のクラス名を上書きします。<a href="https://daneden.github.io/animate.css/" target="_blank" rel="external">Animate.css</a> の例のような、既に存在する CSS アニメーションライブラリで Vue のトランジションシステムに結合したい時は役に立ちます。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-show</span>=<span class="string">"ok"</span> <span class="attr">class</span>=<span class="string">"animated"</span> <span class="attr">transition</span>=<span class="string">"bounce"</span>&gt;</span>Watch me bounce<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.transition(<span class="string">'bounce'</span>, &#123;</span><br><span class="line">  enterClass: <span class="string">'bounceInLeft'</span>,</span><br><span class="line">  leaveClass: <span class="string">'bounceOutRight'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="トランジションタイプの宣言"><a href="#トランジションタイプの宣言" class="headerlink" title="トランジションタイプの宣言"></a>トランジションタイプの宣言</h3><blockquote>
+<p>1.0.14 で新規追加</p>
+</blockquote>
+<p>Vue.js はトランジションが終了したのを知るためにイベントリスナにアタッチする必要があります。適当される CSS ルールのタイプ (type) に応じて、<code>transitionend</code> か <code>animationend</code> のどちらかできます。1 つだけまたは他のルールを適用したい場合は、Vue.js は自動的に正しいタイプを検出することができます。例えば CSS アニメーションが Vue によってトリガされ、ホバー (hover) において CSS トランジションエフェクトも持っているような、いくつかのケースで同じ要素で両方を持ちたい場合は、明示的に以下のようなタイプを宣言する必要があります。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.transition(<span class="string">'bounce'</span>, &#123;</span><br><span class="line">  <span class="comment">// Vue はこのトランジションに対して直ちに</span></span><br><span class="line">  <span class="comment">// `animationend` イベントだけに気にかけるようになります</span></span><br><span class="line">  type: <span class="string">'animation'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="トランジションフローの詳細"><a href="#トランジションフローの詳細" class="headerlink" title="トランジションフローの詳細"></a>トランジションフローの詳細</h3><p><code>show</code> プロパティに変更があると、それに応じて Vue.js は <code>&lt;div&gt;</code> 要素を追加/削除し、以下に指定されているようにトランジションクラスを適用します。</p>
 <ul>
 <li><p><code>show</code> プロパティが <code>false</code> の場合：</p>
 <ol>
@@ -300,18 +328,18 @@ new Vue({
 </ol>
 </li>
 </ul>
-<p>加えて、もし enter トランジションが進行中のときに要素が削除される場合、<code>enterCancelled</code> フックは、変更を一掃する、または <code>enter</code> でタイマーが作成されるための機会を与えるために呼び出されます。逆である leaving トランジションも同じです。</p>
-<p>上記のようなフック関数の全ては、それらの <code>this</code> コンテキストは関連付けられた Vue インスタンスを設定して呼び出されます。もし要素が Vue インスタンスのルートノードの場合、そのインスタンスはそのコンテキストとして使用されます。それ以外の場合は、そのコンテキストはトランジションディレクティブのインスタンスの所有者になります。</p>
+<p>加えて、もし enter トランジションが進行中のときに要素が削除される場合、<code>enterCancelled</code> フックは、変更を一掃する、または <code>enter</code> でタイマーが作成されるための機会を与えるために呼び出されます。逆の leaving トランジションも同じです。</p>
+<p>上記のようなフック関数の全ては、それらの <code>this</code> コンテキストは関連付けられた Vue インスタンスを設定して呼び出されます。これは、コンパイルスコープの同じ規則に従います。トランジションの <code>this</code> コンテキストは、それがコンパイルされるているスコープを示すようになります。</p>
 <p>最後に、<code>enter</code> と <code>leave</code> は、必要に応じて、第2引数にコールバックを取ることができます。これを行うと、トランジションが終了すべきときに明示的に制御したいと示しているため、CSS の <code>transitionend</code>イベントを待ち受ける代わりに、Vue.js は最終的にトランジションを完了するためにコールバックを呼びだすことを期待します。例えば:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">enter: <span class="function"><span class="keyword">function</span> (<span class="params">el</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 第2引数はなく、トランジションと CSS トランジションイベントで決定</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>に対して</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">enter: <span class="function"><span class="keyword">function</span> (<span class="params">el, done</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 第2引数で、`done` が呼ばれたときだけ、トランジションは終了する</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p class="tip">複数要素を同時にトランジションさせる場合、Vue.js はその要素をバッチにし、自動的に連続処理を行います。</p>
 
-<h3 id="CSS_アニメーション">CSS アニメーション</h3><p>CSS アニメーションは、CSS トランジションと同じやり方で適用することができますが、対象の要素が追加された後、<code>animationend</code> がコールバックされるまで <code>v-enter</code> クラスが削除されないという違いがあります。</p>
+<h3 id="CSS-アニメーション"><a href="#CSS-アニメーション" class="headerlink" title="CSS アニメーション"></a>CSS アニメーション</h3><p>CSS アニメーションは、CSS トランジションと同じやり方で適用することができますが、対象の要素が追加された後、<code>animationend</code> がコールバックされるまで <code>v-enter</code> クラスが削除されないという違いがあります。</p>
 <p>例： (CSS ルールの記述は省略)</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">span</span> <span class="attribute">v-show</span>=<span class="value">"show"</span> <span class="attribute">transition</span>=<span class="value">"bounce"</span>&gt;</span>Look at me!<span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="class">.bounce-enter</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">animation</span>:<span class="value"> bounce-in .<span class="number">5s</span></span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="class">.bounce-leave</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">animation</span>:<span class="value"> bounce-out .<span class="number">5s</span></span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="at_rule">@<span class="keyword">keyframes</span> bounce-in </span>&#123;</span><br><span class="line">  0% <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">transform</span>:<span class="value"> <span class="function">scale</span>(<span class="number">0</span>)</span></span>;</span><br><span class="line">  &#125;</span></span><br><span class="line">  50% <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">transform</span>:<span class="value"> <span class="function">scale</span>(<span class="number">1.5</span>)</span></span>;</span><br><span class="line">  &#125;</span></span><br><span class="line">  100% <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">transform</span>:<span class="value"> <span class="function">scale</span>(<span class="number">1</span>)</span></span>;</span><br><span class="line">  &#125;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="at_rule">@<span class="keyword">keyframes</span> bounce-out </span>&#123;</span><br><span class="line">  0% <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">transform</span>:<span class="value"> <span class="function">scale</span>(<span class="number">1</span>)</span></span>;</span><br><span class="line">  &#125;</span></span><br><span class="line">  50% <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">transform</span>:<span class="value"> <span class="function">scale</span>(<span class="number">1.5</span>)</span></span>;</span><br><span class="line">  &#125;</span></span><br><span class="line">  100% <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">transform</span>:<span class="value"> <span class="function">scale</span>(<span class="number">0</span>)</span></span>;</span><br><span class="line">  &#125;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">v-show</span>=<span class="string">"show"</span> <span class="attr">transition</span>=<span class="string">"bounce"</span>&gt;</span>Look at me!<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">bounce-transition</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: inline-block; <span class="comment">/* 他の場合、スケールアニメーションは動作しません */</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.bounce-enter</span> &#123;</span><br><span class="line">  <span class="attribute">animation</span>: bounce-in .<span class="number">5s</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.bounce-leave</span> &#123;</span><br><span class="line">  <span class="attribute">animation</span>: bounce-out .<span class="number">5s</span>;</span><br><span class="line">&#125;</span><br><span class="line">@<span class="keyword">keyframes</span> bounce-in &#123;</span><br><span class="line">  0% &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">scale</span>(0);</span><br><span class="line">  &#125;</span><br><span class="line">  50% &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">scale</span>(1.5);</span><br><span class="line">  &#125;</span><br><span class="line">  100% &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">scale</span>(1);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">@<span class="keyword">keyframes</span> bounce-out &#123;</span><br><span class="line">  0% &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">scale</span>(1);</span><br><span class="line">  &#125;</span><br><span class="line">  50% &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">scale</span>(1.5);</span><br><span class="line">  &#125;</span><br><span class="line">  100% &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">scale</span>(0);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <div id="anim" class="demo">
   <span v-show="show" transition="bounce">Look at me!</span>
@@ -320,6 +348,9 @@ new Vue({
 </div>
 
 <style>
+  .bounce-transition {
+    display: inline-block;
+  }
   .bounce-enter {
     -webkit-animation: bounce-in .5s;
     animation: bounce-in .5s;
@@ -330,52 +361,58 @@ new Vue({
   }
   @keyframes bounce-in {
     0% {
-      transform: scale(0);
       -webkit-transform: scale(0);
+      transform: scale(0);
     }
     50% {
-      transform: scale(1.5);
       -webkit-transform: scale(1.5);
+      transform: scale(1.5);
     }
     100% {
-      transform: scale(1);
       -webkit-transform: scale(1);
+      transform: scale(1);
     }
   }
   @keyframes bounce-out {
     0% {
-      transform: scale(1);
       -webkit-transform: scale(1);
+      transform: scale(1);
     }
     50% {
-      transform: scale(1.5);
       -webkit-transform: scale(1.5);
+      transform: scale(1.5);
     }
     100% {
-      transform: scale(0);
       -webkit-transform: scale(0);
+      transform: scale(0);
     }
   }
   @-webkit-keyframes bounce-in {
     0% {
       -webkit-transform: scale(0);
+      transform: scale(0);
     }
     50% {
       -webkit-transform: scale(1.5);
+      transform: scale(1.5);
     }
     100% {
       -webkit-transform: scale(1);
+      transform: scale(1);
     }
   }
   @-webkit-keyframes bounce-out {
     0% {
       -webkit-transform: scale(1);
+      transform: scale(1);
     }
     50% {
       -webkit-transform: scale(1.5);
+      transform: scale(1.5);
     }
     100% {
       -webkit-transform: scale(0);
+      transform: scale(0);
     }
   }
 </style>
@@ -387,18 +424,20 @@ new Vue({
 })
 </script>
 
-<h2 id="JavaScript_トランジション">JavaScript トランジション</h2><p>どんな CSS ルールの定義しなくても、JavaScript フックを利用することができます。JavaScript トランジションだけ利用するとき、<strong><code>done</code> コールバックは <code>enter</code> と <code>leave</code> フック向けに必須とであり</strong>、そうでなければ、それらは同期的に呼ばれ、そしてトランジションはすぐに終了します。</p>
-<p>Vue.js は CSS の検出をスキップできるため、あなたの JavaScript トランジションに対して明示的に <code>css: false</code> を宣言することもよいアイディアです。これは、トランジションによる偶発的な干渉からカスケードされる CSS ルールも防止します。</p>
+<h2 id="JavaScript-トランジション"><a href="#JavaScript-トランジション" class="headerlink" title="JavaScript トランジション"></a>JavaScript トランジション</h2><p>どんな CSS ルールの定義しなくても、JavaScript フックを利用することができます。JavaScript トランジションだけ利用するとき、<strong><code>done</code> コールバックは <code>enter</code> と <code>leave</code> フック向けに必須となり</strong>、そうでなければ、それらは同期的に呼ばれ、そしてトランジションはすぐに終了します。</p>
+<p>Vue.js は CSS の検出をスキップできるため、JavaScript トランジションに対して明示的に <code>css: false</code> を宣言することもよいアイディアです。これは、トランジションによる偶発的な干渉からカスケードされる CSS ルールも防止します。</p>
 <p>以下の例では、jQuery を使用してカスタムな JavaScript トランジションの定義を登録します:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.transition(<span class="string">'fade'</span>, &#123;</span><br><span class="line">  css: <span class="literal">false</span>,</span><br><span class="line">  enter: <span class="function"><span class="keyword">function</span> (<span class="params">el, done</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 要素は既に DOM に挿入されており、</span></span><br><span class="line">    <span class="comment">// アニメーションが終わったとき、done は呼ばれます</span></span><br><span class="line">    $(el)</span><br><span class="line">      .css(<span class="string">'opacity'</span>, <span class="number">0</span>)</span><br><span class="line">      .animate(&#123; opacity: <span class="number">1</span> &#125;, <span class="number">1000</span>, done)</span><br><span class="line">  &#125;,</span><br><span class="line">  enterCancelled: <span class="function"><span class="keyword">function</span> (<span class="params">el</span>) </span>&#123;</span><br><span class="line">    $(el).stop()</span><br><span class="line">  &#125;,</span><br><span class="line">  leave: <span class="function"><span class="keyword">function</span> (<span class="params">el, done</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// enter と同様</span></span><br><span class="line">    $(el).animate(&#123; opacity: <span class="number">0</span> &#125;, <span class="number">1000</span>, done)</span><br><span class="line">  &#125;,</span><br><span class="line">  leaveCancelled: <span class="function"><span class="keyword">function</span> (<span class="params">el</span>) </span>&#123;</span><br><span class="line">    $(el).stop()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>次に、<code>transition</code> 属性によってそれ使用するとき、同じ結果になります:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">p</span> <span class="attribute">transition</span>=<span class="value">"fade"</span>&gt;</span><span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="スタガリングトランジション">スタガリングトランジション</h2><p><code>v-for</code> で <code>transition</code> を使用するとき、スタガリングトランジションを作成することが可能です。<code>stagger</code>、か <code>enter-stagger</code>、かまたは <code>leave-stagger</code> のいずれかの属性をトランジション要素に追加することによってこれをすることができます:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-for</span>=<span class="value">"list"</span> <span class="attribute">transition</span> <span class="attribute">stagger</span>=<span class="value">"100"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">transition</span>=<span class="string">"fade"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="スタガリングトランジション"><a href="#スタガリングトランジション" class="headerlink" title="スタガリングトランジション"></a>スタガリングトランジション</h2><p><code>v-for</code> で <code>transition</code> を使用するとき、スタガリングトランジションを作成することが可能です。<code>stagger</code>、か <code>enter-stagger</code>、かまたは <code>leave-stagger</code> のいずれかの属性をトランジション要素に追加することによってこれをすることができます:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">"item in list"</span> <span class="attr">transition</span>=<span class="string">"stagger"</span> <span class="attr">stagger</span>=<span class="string">"100"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>または、より細かい制御のために、<code>stagger</code>、<code>enterStagger</code> または <code>leaveStagger</code> フックを提供することができます:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Vue.transition(<span class="string">'stagger'</span>, &#123;</span><br><span class="line">  stagger: <span class="function"><span class="keyword">function</span> (<span class="params">index</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 各トランジションされた項目に対して 50ms 遅延を増加させ、</span></span><br><span class="line">    <span class="comment">// しかし最大遅延は 300ms に制限</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Math</span>.min(<span class="number">300</span>, index * <span class="number">50</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>例:</p>
-<iframe width="100%" height="200" style="margin-left:10px" src="http://jsfiddle.net/yyx990803/mvo99bse/embedded/result,html,js,css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="200" style="margin-left:10px" src="https://jsfiddle.net/yyx990803/mvo99bse/embedded/result,html,js,css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+<p class="tip"><code>stagger</code> 属性は <code>v-if</code> または <code>v-show</code> によって追加されたまたは削除されたアイテムのトランジションに影響を及ぼしません。配列への変更または <code>v-for</code> に提供されたオブジェクトだけが、ずらした配置へのトランジションの原因となります。</p>
 
     
       <div class="guide-links">
@@ -410,16 +449,17 @@ new Vue({
         
       </div>
     
-    <div class="footer">間違いを見つけた、またはドキュメントに貢献したいですか？<a href="https://github.com/vuejs-jp/jp.vuejs.org" target="_blank">Github からこのサイトを Fork しましょう</a>！</div>
+    <div class="footer">間違いを見つけた、またはドキュメントに貢献したいですか？<a href="https://github.com/vuejs/jp.vuejs.org/blob/lang-ja/src/guide/transitions.md" target="_blank">Github 上でこのページを編集する</a> か、<a href="https://github.com/vuejs/jp.vuejs.org" target="_blank">Github からこのサイトを Fork してプルリクエストしましょう</a>！</div>
 </div>
 
                 
             </div>
+            <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
             <script src="/js/smooth-scroll.min.js"></script>
             <script src="/js/common.js"></script>
         
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 FastClick.attach(document.body);

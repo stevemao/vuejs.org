@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
     <head>
         <title>インストール - vue.js</title>
         <meta charset="utf-8">
         <meta name="description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Dosis:300,500&text=Vue.js' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Dosis:300,500&text=Vue.js' rel='stylesheet' type='text/css'>
+        <link href="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" rel='stylesheet' type='text/css'>
         <link rel="icon" href="/images/logo.png" type="image/x-icon">
         <script>
             window.PAGE_TYPE = "guide"
         </script>
-        <link rel="stylesheet" href="/css/page.css" type="text/css">
+        <link rel="stylesheet" href="/css/page.css">
         <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -38,7 +39,7 @@
     <ul id="nav">
         <li>
   <form id="search-form">
-    <input type="text" id="search-query" class="st-default-search-input">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
   </form>
 </li>
 <li><a href="/guide/" class="nav-link current">ガイド</a></li>
@@ -58,6 +59,7 @@
 
     </ul>
 </div>
+
             <div id="main">
                 
                     
@@ -65,7 +67,7 @@
     <ul class="main-menu">
         <li>
   <form id="search-form">
-    <input type="text" id="search-query" class="st-default-search-input">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
   </form>
 </li>
 <li><a href="/guide/" class="nav-link current">ガイド</a></li>
@@ -85,13 +87,20 @@
 
     </ul>
     <div class="list">
+        <div id="donate" style="margin-bottom: 20px">
+            <span class="wrapper" style="width: 110px">
+              <img src="/images/patreon.png">
+              <a href="/support-vuejs">Support Vue.js</a>
+            </span>
+        </div>
         <h2>
         
         ガイド
         
         <select class="version-select">
-            <option selected>1.0</option>
-            <option>0.12</option>
+            <option value="">2.0</option>
+            <option selected value="SELF">1.0</option>
+            <option value="012">0.12</option>
         </select>
         </h2>
         <ul class="menu-root">
@@ -176,28 +185,37 @@
                     <a href="/guide/comparison.html" class="sidebar-link">他のフレームワークとの比較</a>
                 </li>
             
+                <li>
+                    <a href="/guide/join.html" class="sidebar-link">Vue コミュニティへ参加しましょう！</a>
+                </li>
+            
         </ul>
     </div>
 </div>
 
 
 <div class="content guide with-sidebar">
-    <h1>インストール</h1>
     <div id="ad">
-        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs" id="_carbonads_js"></script>
-    </div>
-    <blockquote>
-<p><strong>互換性に関する注意:</strong> Vue.js は IE8 以下をサポートしていません。</p>
-</blockquote>
-<h2 id="スタンドアロン">スタンドアロン</h2><p>ダウンロードし script タグで読み込んでください。<code>Vue</code> はグローバル変数として登録されます。</p>
-<div id="downloads"><br><a class="button" href="https://raw.github.com/vuejs/vue/1.0.3/dist/vue.js" download="" target="_blank" rel="external">開発バージョン</a><span class="light info">警告出力とデバッグモードあり</span><br><br><a class="button" href="https://raw.github.com/vuejs/vue/1.0.3/dist/vue.min.js" download="" target="_blank" rel="external">プロダクションバージョン</a><span class="light info">警告出力なし、23.73kb min+gzip</span><br></div>
+  <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs" id="_carbonads_js"></script>
+</div>
 
-<h3 id="CDN">CDN</h3><p> <a href="//cdn.jsdelivr.net/vue/1.0.3/vue.min.js">jsdelivr</a> または <a href="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.3/vue.min.js">cdnjs</a> を利用可能です。 (同期に少し時間がかかるので、最新版ではないかもしれません)。</p>
-<h3 id="CSP_準拠ビルド">CSP 準拠ビルド</h3><p>Google Chrome アプリのようなある環境では、Content Security Policy (CSP) を強制し、そして式の評価するために <code>new Function()</code> の使用を許可しません。これらのケースの場合、<a href="https://github.com/vuejs/vue/tree/csp/dist" target="_blank" rel="external">CSP 準拠ビルド</a> を代わりに使用できます。</p>
-<h2 id="NPM">NPM</h2><p>NPM は Vue.js で大規模アプリケーションを構築するときのインストール方法を推奨します。<a href="http://webpack.github.io/" target="_blank" rel="external">Webpack</a> または <a href="http://browserify.org/" target="_blank" rel="external">Browserify</a> のような CommonJS モジュールバンドラでうまくペアにします。Vue.js は<a href="application.html#Single_File_Components">単一ファイルコンポーネント</a>による著作のための、付随するツールも提供しています。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 最新の安定版</span></span><br><span class="line">$ npm install vue</span><br><span class="line"><span class="comment"># 最新の安定版 + CSP 準拠</span></span><br><span class="line">$ npm install vue@csp</span><br><span class="line"><span class="comment"># 開発ビルド (Github から直接):</span></span><br><span class="line">$ npm install vuejs/vue<span class="comment">#dev</span></span><br></pre></td></tr></table></figure>
-<h2 id="Bower">Bower</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 最新の安定版</span></span><br><span class="line">$ bower install vue</span><br></pre></td></tr></table></figure>
-<h2 id="AMD_モジュールローダ">AMD モジュールローダ</h2><p>ダウンロードされたスタンドアロン版 Vue.js と Bower 経由でインストールされた Vue.js は UMD でラップされています。そのため、 AMD モジュールとして直接利用することができます。</p>
+    <h1>インストール</h1>
+    <h3 id="互換性の注意"><a href="#互換性の注意" class="headerlink" title="互換性の注意"></a>互換性の注意</h3><p>Vue.js は IE8 でシム化できない ECMAScript 5 の機能を使用するため、IE8 とそれ以下のバージョンをサポートして<strong>いません</strong>。しかしながら、<a href="http://caniuse.com/#feat=es5" target="_blank" rel="external">ECMAScript 5 準拠のブラウザ</a> は全てサポートしています。</p>
+<h3 id="リリースノート"><a href="#リリースノート" class="headerlink" title="リリースノート"></a>リリースノート</h3><p>各バージョンの詳細なリリースノートは、<a href="https://github.com/vuejs/vue/releases" target="_blank" rel="external">GitHub</a> で入手できます。</p>
+<h2 id="スタンドアロン"><a href="#スタンドアロン" class="headerlink" title="スタンドアロン"></a>スタンドアロン</h2><p>ダウンロードし script タグで読み込んでください。<code>Vue</code> はグローバル変数として登録されます。</p>
+<div id="downloads"><br><a class="button" href="/js/vue.js" download="">開発バージョン</a><span class="light info">警告出力とデバッグモードあり</span><br><br><a class="button" href="/js/vue.min.js" download="">プロダクションバージョン</a><span class="light info">警告出力なし、26.27kb min+gzip</span><br></div>
+
+<h3 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h3><p><a href="//cdn.jsdelivr.net/vue/1.0.28/vue.min.js">jsdelivr</a> または <a href="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.min.js">cdnjs</a> を利用可能です。 (同期に少し時間がかかるため、最新版ではないかもしれません)。</p>
+<p><a href="https://unpkg.com/vue/dist/vue.min.js" target="_blank" rel="external">unpkg</a> 上でも利用可能で、npm に公開されるとすぐに最新バージョンが反映されます。<a href="https://unpkg.com/vue/" target="_blank" rel="external">unpkg.com/vue/</a> では npm パッケージのソースも確認することができます。</p>
+<h3 id="CSP-準拠ビルド"><a href="#CSP-準拠ビルド" class="headerlink" title="CSP 準拠ビルド"></a>CSP 準拠ビルド</h3><p>Google Chrome アプリのようなある環境では、Content Security Policy (CSP) を強制し、そして式を評価するために <code>new Function()</code> の使用を許可しません。このような場合には、<a href="https://github.com/vuejs/vue/tree/csp/dist" target="_blank" rel="external">CSP 準拠ビルド</a>を代わりに使用できます。</p>
+<h2 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h2><p>Vue.js による大規模アプリケーションを構築するときには、NPM を利用したインストールを推奨しています。<a href="http://webpack.github.io/" target="_blank" rel="external">Webpack</a> または <a href="http://browserify.org/" target="_blank" rel="external">Browserify</a> のような CommonJS モジュールバンドラとうまく組み合わせられます。Vue.js は<a href="application.html#単一ファイルコンポーネント">単一ファイルコンポーネント</a>を作成するための、付随するツールも提供しています。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 最新の安定版</span></span><br><span class="line">$ npm install vue</span><br><span class="line"><span class="comment"># 最新の安定版 + CSP 準拠</span></span><br><span class="line">$ npm install vue@csp</span><br></pre></td></tr></table></figure>
+<h2 id="CLI"><a href="#CLI" class="headerlink" title="CLI"></a>CLI</h2><p>Vue.js は意欲的なシングルページアプリケーションをすぐに足場固めするために、<a href="https://github.com/vuejs/vue-cli" target="_blank" rel="external">オフィシャル CLI</a> を提供します。それはモダンなフロントエンドのフレームワークのワークフローに対して、Battery-included なビルド手順を提供します。ホットリローディング、保存時のリント、そして本番可能なビルドを実行して準備するのは、わずか数分です。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># インストール vue-cli</span></span><br><span class="line">$ npm install -g vue-cli</span><br><span class="line"><span class="comment"># "webpack" ボイラープレートを使用した新しいプロジェクトを作成する</span></span><br><span class="line">$ vue init webpack my-project</span><br><span class="line"><span class="comment"># 依存関係をインストールしてgo!</span></span><br><span class="line">$ <span class="built_in">cd</span> my-project</span><br><span class="line">$ npm install</span><br><span class="line">$ npm run dev</span><br></pre></td></tr></table></figure>
+<h2 id="開発版のビルド"><a href="#開発版のビルド" class="headerlink" title="開発版のビルド"></a>開発版のビルド</h2><p><strong>重要</strong>: NPM に配信された CommonJS バンドル (<code>vue.common.js</code>) はリリース時に <code>master</code> ブランチにチェックインされているため、<code>dev</code> ブランチのファイルは安定リリース版と同じです。Github 上の最新のソースコードから Vue を使用するためには、あなた自身がそれをビルドしなければなりません！</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/vuejs/vue.git node_modules/vue</span><br><span class="line"><span class="built_in">cd</span> node_modules/vue</span><br><span class="line">npm install</span><br><span class="line">npm run build</span><br></pre></td></tr></table></figure>
+<h2 id="Bower"><a href="#Bower" class="headerlink" title="Bower"></a>Bower</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 最新の安定版</span></span><br><span class="line">$ bower install vue</span><br></pre></td></tr></table></figure>
+<h2 id="AMD-モジュールローダ"><a href="#AMD-モジュールローダ" class="headerlink" title="AMD モジュールローダ"></a>AMD モジュールローダ</h2><p>ダウンロードされたスタンドアロン版 Vue.js と Bower 経由でインストールされた Vue.js は UMD でラップされています。そのため、AMD モジュールとして直接利用することができます。</p>
 
     
       <div class="guide-links">
@@ -207,16 +225,17 @@
         
       </div>
     
-    <div class="footer">間違いを見つけた、またはドキュメントに貢献したいですか？<a href="https://github.com/vuejs-jp/jp.vuejs.org" target="_blank">Github からこのサイトを Fork しましょう</a>！</div>
+    <div class="footer">間違いを見つけた、またはドキュメントに貢献したいですか？<a href="https://github.com/vuejs/jp.vuejs.org/blob/lang-ja/src/guide/installation.md" target="_blank">Github 上でこのページを編集する</a> か、<a href="https://github.com/vuejs/jp.vuejs.org" target="_blank">Github からこのサイトを Fork してプルリクエストしましょう</a>！</div>
 </div>
 
                 
             </div>
+            <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
             <script src="/js/smooth-scroll.min.js"></script>
             <script src="/js/common.js"></script>
         
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 FastClick.attach(document.body);

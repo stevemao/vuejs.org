@@ -132,19 +132,35 @@ p {
 }
 a.button {
   display: inline-block;
-  font-family: 'Roboto Mono', Monaco, courier, monospace;
   font-weight: 700;
   color: #fff;
   background-color: #4fc08d;
+  transition: all 0.15s ease;
+  font-family: 'Roboto Mono', Monaco, courier, monospace;
   border-bottom: 2px solid #3aa373;
   padding: 12px 14px;
   border-radius: 4px;
-  transition: all 0.15s ease;
 }
 a.button:hover {
   background-color: #5dc596;
-  -webkit-transform: translate(0, -2px);
-  transform: translate(0, -2px);
+  -webkit-transform: scale(1.03);
+  transform: scale(1.03);
+}
+a.small-button {
+  display: inline-block;
+  font-weight: 700;
+  color: #fff;
+  background-color: #4fc08d;
+  transition: all 0.15s ease;
+  padding: 4px 8px 5px;
+  border-radius: 4px;
+  width: 200px;
+  margin: 5px;
+}
+a.small-button:hover {
+  background-color: #5dc596;
+  -webkit-transform: scale(1.03);
+  transform: scale(1.03);
 }
 .highlight {
   overflow-x: auto;
@@ -205,26 +221,26 @@ a.button:hover {
   overflow-x: hidden;
 }
 #ad {
-  width: 130px;
+  width: 140px;
   position: fixed;
   z-index: 99;
   bottom: 10px;
   right: 10px;
   padding: 10px;
-  background-color: #fff;
+  background-color: rgba(255,255,255,0.65);
   border-radius: 3px;
   font-size: 13px;
 }
-#ad .carbon-img,
-#ad .carbon-text {
-  display: block;
-  margin-bottom: 6px;
+#ad a {
+  color: #7f8c8d;
   font-weight: normal;
-  color: #34495e;
 }
-#ad .carbon-poweredby {
-  color: #aaa;
-  font-weight: normal;
+#ad span {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+#ad img {
+  width: 125px;
 }
 #nav .nav-link {
   cursor: pointer;
@@ -274,6 +290,41 @@ a.button:hover {
   border-right: 4px solid transparent;
   border-top: 5px solid #ccc;
 }
+#donate {
+  height: 24px;
+}
+#donate .wrapper {
+  vertical-align: top;
+  height: 20px;
+  border: 1px solid #d4d4d4;
+  display: inline-block;
+  box-sizing: border-box;
+  line-height: 16px;
+  border-radius: 3px;
+  cursor: pointer;
+  background-image: linear-gradient(to bottom, #fcfcfc 0, #eee 100%);
+  position: relative;
+  width: 72px;
+}
+#donate .wrapper:hover {
+  border-color: #ccc;
+  background-image: linear-gradient(to bottom, #eee 0, #ddd 100%);
+}
+#donate .wrapper img {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 2px;
+  left: 5px;
+}
+#donate .wrapper a {
+  font: 700 11px/14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #333;
+  text-shadow: 0 1px 0 #fff;
+  position: absolute;
+  top: 2px;
+  left: 24px;
+}
 html,
 body {
   height: 100%;
@@ -296,7 +347,9 @@ body {
   margin-right: 0;
 }
 #translations {
-  margin-bottom: 3em;
+  position: fixed;
+  right: 1em;
+  bottom: 0.5em;
 }
 #translations .delimiter {
   color: #7f8c8d;
@@ -332,6 +385,7 @@ body {
   position: relative;
 }
 #hero .inner {
+  z-index: 2;
   height: 640px;
   width: 100%;
   position: absolute;
@@ -357,6 +411,7 @@ body {
 }
 #hero .down {
   position: absolute;
+  z-index: 1;
   bottom: 0;
   width: 100%;
   left: 0;
@@ -422,6 +477,7 @@ body {
 }
 #example #demo {
   padding: 0 20px;
+  word-wrap: break-word;
 }
 #example #demo input {
   font-size: 0.75em;
@@ -569,12 +625,49 @@ body {
 #main {
   display: none;
 }
+#donate {
+  margin-left: -2px !important;
+}
+iframe.__slackin {
+  position: relative;
+  z-index: 10;
+}
+#sponsors {
+  padding-top: 20px;
+}
+#sponsors span,
+#sponsors-mobile span {
+  color: #7f8c8d;
+  font-size: 0.85em;
+}
+#sponsors a,
+#sponsors-mobile a,
+#sponsors img,
+#sponsors-mobile img {
+  position: relative;
+  width: 100px;
+  display: inline-block;
+  vertical-align: middle;
+}
+#sponsors a,
+#sponsors-mobile a {
+  margin: 5px 10px 0;
+}
+#sponsors-mobile {
+  display: none;
+  text-align: center;
+  margin-bottom: 2em;
+  padding: 0 1em;
+}
+#sponsors-mobile a {
+  margin: 20px 10px 0;
+}
 @media screen and (max-width: 480px) {
   body {
     font-size: 14px;
   }
   #nav {
-    margin: 2em 1.8em 0;
+    margin: 1.5em 1.2em 0;
   }
   #translations {
     margin-bottom: 2em;
@@ -616,7 +709,7 @@ body {
   #hero .warning,
   #hero .desc {
     font-size: 0.85em;
-    margin: 1em auto;
+    margin: 0.8em auto;
   }
   #hero .warning br,
   #hero .desc br {
@@ -628,6 +721,7 @@ body {
   #social {
     max-width: 340px;
     margin: 1.2em auto;
+    line-height: 1.8em;
   }
   .cool {
     margin-top: 0;
@@ -644,19 +738,17 @@ body {
   #why h2 {
     font-size: 1.4em;
   }
-  #ad {
-    position: static;
-  }
-  #ad .carbon-img,
-  #ad .carbon-text,
-  #ad .carbon-poweredby {
-    display: inline-block;
-  }
 }
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 960px) {
   #features,
   #hero {
     font-size: 16px;
+  }
+  #sponsors {
+    display: none;
+  }
+  #sponsors-mobile {
+    display: block;
   }
   #example .block {
     display: block;
@@ -671,5 +763,10 @@ body {
     height: 1em;
     line-height: 1em;
     padding: 0.5em 0;
+  }
+  #translations {
+    position: relative;
+    right: 0;
+    bottom: 0;
   }
 }
