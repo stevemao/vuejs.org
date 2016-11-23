@@ -489,17 +489,17 @@
 <h2 id="スタンドアロン"><a href="#スタンドアロン" class="headerlink" title="スタンドアロン"></a>スタンドアロン</h2><p>ダウンロードし script タグで読み込んでください。<code>Vue</code> はグローバル変数として登録されます。</p>
 <p class="tip">開発中はプロダクションバージョンを使用しないでください。 警告や一般的な間違いを見逃す可能性があります!</p>
 
-<div id="downloads"><br><a class="button" href="/js/vue.js" download="">開発バージョン</a><span class="light info">警告出力とデバッグモードあり </span><br><br><a class="button" href="/js/vue.min.js" download="">プロダクションバージョン</a><span class="light info">警告出力なし、 24.83kb min+gzip</span><br></div>
+<div id="downloads"><br><a class="button" href="/js/vue.js" download="">開発バージョン</a><span class="light info">警告出力とデバッグモードあり </span><br><br><a class="button" href="/js/vue.min.js" download="">プロダクションバージョン</a><span class="light info">警告出力なし、 24.87kb min+gzip</span><br></div>
 
 <h3 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h3><p>推奨: <a href="https://unpkg.com/vue/dist/vue.min.js" target="_blank" rel="external">unpkg</a> は、npm に公開されるとすぐに最新バージョンが反映されます。<a href="https://unpkg.com/vue/" target="_blank" rel="external">unpkg.com/vue/</a> では npm パッケージのソースも確認することができます。</p>
-<p><a href="https://cdn.jsdelivr.net/vue/2.1.0/vue.min.js" target="_blank" rel="external">jsdelivr</a> または <a href="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.0/vue.min.js" target="_blank" rel="external">cdnjs</a> 上でも利用可能です。(同期に少し時間がかかるため、最新版ではない可能性があります)。</p>
+<p><a href="https://cdn.jsdelivr.net/vue/2.1.1/vue.min.js" target="_blank" rel="external">jsdelivr</a> または <a href="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.1/vue.min.js" target="_blank" rel="external">cdnjs</a> 上でも利用可能です。(同期に少し時間がかかるため、最新版ではない可能性があります)。</p>
 <h2 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h2><p>Vue.js による大規模アプリケーションを構築するときには、NPM を利用したインストールを推奨しています。 <a href="http://webpack.github.io/" target="_blank" rel="external">Webpack</a> または <a href="http://browserify.org/" target="_blank" rel="external">Browserify</a> のようモジュールハンドラとうまく組み合わせられます。 Vue は<a href="single-file-components.html">単一ファイルコンポーネント</a>を作成するための、付随するツールも提供しています。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># 最新の安定版</span></div><div class="line">$ npm install vue</div></pre></td></tr></table></figure>
 <h3 id="スタンドアロン-vs-ランタイム限定ビルド"><a href="#スタンドアロン-vs-ランタイム限定ビルド" class="headerlink" title="スタンドアロン vs. ランタイム限定ビルド"></a>スタンドアロン vs. ランタイム限定ビルド</h3><p>スタンドアロンビルドとランタイム限定ビルドの2つのビルドが使用可能です。</p>
 <ul>
 <li><p>スタンドアロンビルドはコンパイラを内蔵しており、 <code>template</code> オプションをサポートしています。 <strong>ブラウザの API に依存しているため、サーバサイドレンダリングに使用することはできません。</strong></p>
 </li>
-<li><p>ランタイム限定ビルドは、テンプレートコンパイラを内蔵しておらず、 <code>template</code> オプションはサポートされていません。ランタイム限定ビルドを使用している場合は <code>render</code> オプションのみ使用することが可能ですが、単一ファイルコンポーネントのテンプレートはビルド時に <code>render</code> 関数をプリコンパイルされるので使用可能です。ランタイム限定ビルドは 17.12 kb min+gzip で、スタンドアロンビルドよりも30%軽量です。</p>
+<li><p>ランタイム限定ビルドは、テンプレートコンパイラを内蔵しておらず、 <code>template</code> オプションはサポートされていません。ランタイム限定ビルドを使用している場合は <code>render</code> オプションのみ使用することが可能ですが、単一ファイルコンポーネントのテンプレートはビルド時に <code>render</code> 関数をプリコンパイルされるので使用可能です。ランタイム限定ビルドは 17.15 kb min+gzip で、スタンドアロンビルドよりも30%軽量です。</p>
 </li>
 </ul>
 <p>NPM パッケージはデフォルトで<strong>ランタイム限定</strong>ビルドを出力します。スタンドアロンビルドを使用する場合は、webpack のコンフィグに下記のエイリアスを追加します。</p>
