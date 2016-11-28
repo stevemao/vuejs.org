@@ -421,7 +421,7 @@ body.docs #nav {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 #demo h1,
 .demo h1 {
@@ -429,9 +429,23 @@ body.docs #nav {
   font-size: 1.8em;
 }
 #demo ul,
-.demo ul {
+.demo ul,
+#demo ol,
+.demo ol {
   padding-left: 1.5em;
-  margin: 0;
+  padding-bottom: 0.2em !important;
+}
+#demo ul:first-child,
+.demo ul:first-child,
+#demo ol:first-child,
+.demo ol:first-child {
+  margin-top: 0;
+}
+#demo ul:last-child,
+.demo ul:last-child,
+#demo ol:last-child,
+.demo ol:last-child {
+  margin-bottom: 0;
 }
 #demo li,
 .demo li {
@@ -441,6 +455,11 @@ body.docs #nav {
 .demo li.done {
   color: #7f8c8d;
   text-decoration: line-through;
+}
+#demo p,
+.demo p {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 #demo p:first-child,
 .demo p:first-child {
@@ -644,7 +663,7 @@ ul.demo li {
   font-size: 0.9em;
   color: #fff;
   margin: 0.2em 0;
-  width: 216px;
+  width: 226px;
   text-align: center;
   padding: 12px 24px;
   display: inline-block;

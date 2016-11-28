@@ -80,6 +80,7 @@
   <a class="nav-link">言語</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><a href="https://vuejs.org/" class="nav-link" target="_blank">英語</a></li>
+    <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
   </ul>
 </li>
 
@@ -134,6 +135,7 @@
   <a class="nav-link">言語</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><a href="https://vuejs.org/" class="nav-link" target="_blank">英語</a></li>
+    <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
   </ul>
 </li>
 
@@ -546,22 +548,22 @@
         <link rel="stylesheet" href="/css/search.css">
         <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
         <script>
-        [
-          '#search-query-nav',
-          '#search-query-sidebar'
-        ].forEach(function (selector) {
-          if (!document.querySelector(selector)) return
-          // search index defaults to v2
-          var match = window.location.pathname.match(/^\/(v\d+)/)
-          var version = match ? match[1] : 'v2'
-          docsearch({
-            appId: 'BH4D9OD16A',
-            apiKey: '0a75952972806d9ad07e387d08e9cc4c',
-            indexName: 'vuejs_jp',
-            inputSelector: selector,
-            algoliaOptions: { facetFilters: ["version:" + version] }
+          [
+            '#search-query-nav',
+            '#search-query-sidebar'
+          ].forEach(function (selector) {
+            if (!document.querySelector(selector)) return
+            // search index defaults to v2
+            var match = window.location.pathname.match(/^\/(v\d+)/)
+            var version = match ? match[1] : 'v2'
+            docsearch({
+              appId: 'BH4D9OD16A',
+              apiKey: '0a75952972806d9ad07e387d08e9cc4c',
+              indexName: 'vuejs_jp',
+              inputSelector: selector,
+              algoliaOptions: { facetFilters: ["version:" + version] }
+            })
           })
-        })
         </script>
 
         <!-- fastclick -->

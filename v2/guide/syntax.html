@@ -80,6 +80,7 @@
   <a class="nav-link">言語</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><a href="https://vuejs.org/" class="nav-link" target="_blank">英語</a></li>
+    <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
   </ul>
 </li>
 
@@ -134,6 +135,7 @@
   <a class="nav-link">言語</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><a href="https://vuejs.org/" class="nav-link" target="_blank">英語</a></li>
+    <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
   </ul>
 </li>
 
@@ -504,7 +506,7 @@
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line">&#123;&#123; number + 1 &#125;&#125;</div><div class="line"></div><div class="line">&#123;&#123; ok ? 'YES' : 'NO' &#125;&#125;</div><div class="line"></div><div class="line">&#123;&#123; message.split('').reverse().join('') &#125;&#125;</div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:id</span>=<span class="string">"'list-' + id"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>これらの式は、Vue インスタンスが所有するデータスコープ内で JavaScript として評価されます。制限として、それぞれのバインディングは、<strong>単一の式</strong>だけ含むことができるというものです。なので、以下は動作<strong>しません</strong>:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- これは文であり、式ではありません: --&gt;</span></div><div class="line">&#123;&#123; var a = 1 &#125;&#125;</div><div class="line"></div><div class="line"><span class="comment">&lt;!-- フロー制御もいずれも動作しません。三項演算子を使用してください --&gt;</span></div><div class="line">&#123;&#123; if (ok) &#123; return message &#125; &#125;&#125;</div></pre></td></tr></table></figure>
-<p class="tip">テンプレート式はサンドボックスで、｀Math｀ や <code>Date</code> といったホワイトリストにあるグローバルオブジェクトだけアクセスできます。テンプレート式内でユーザーが定義したグローバルオブジェクトにアクセスしようとしてはいけません。</p>
+<p class="tip">テンプレート式はサンドボックスで、<code>Math</code> や <code>Date</code> といったホワイトリストにあるグローバルオブジェクトだけアクセスできます。テンプレート式内でユーザーが定義したグローバルオブジェクトにアクセスしようとしてはいけません。</p>
 
 <h2 id="ディレクティブ"><a href="#ディレクティブ" class="headerlink" title="ディレクティブ"></a>ディレクティブ</h2><p>ディレクティブは <code>v-</code> から始まる特別な属性です。ディレクティブ属性値は、<strong>単一の JavaScript 式</strong>を期待します(ただし、<code>v-for</code>は例外で、これについては後から説明します)。ディレクティブの仕事は、属性値の式が変化したときに、リアクティブに副作用を DOM に適用することです。イントロダクションで見た例を振り返ってみましょう:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">v-if</span>=<span class="string">"seen"</span>&gt;</span>Now you see me<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -529,7 +531,7 @@
 <p>フィルタは JavaScript 関数なので、引数を取ります:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line">&#123;&#123; message | filterA('arg1', arg2) &#125;&#125;</div></pre></td></tr></table></figure>
 <p>ここで、プレーン文字列 <code>&#39;arg1&#39;</code> は、第2引数としてフィルタに渡されます。そして、式 <code>arg2</code> の値は評価され、第3引数としてフィルタに渡されます。</p>
-<h2 id="省略記法"><a href="#省略記法" class="headerlink" title="省略記法"></a>省略記法</h2><p><code>v-</code> 接頭子は、テンプレート内の Vue 独自の属性を識別するための目印となっています。これは既存のマークアップに対して、 Vue.js を利用して動的な振る舞いを適用する場合に便利ですが、頻繁に利用されるディレクティブに対しては冗長に感じることがあるでしょう。同時に<a href="https://en.wikipedia.org/wiki/Single-page_application" target="_blank" rel="external">シングルページアプリケーション</a>を作成するにあたり、全てのテンプレートを Vue.js で管理しているとき、<code>v-</code> 接頭子を付ける必要性は低いものになるでしょう。したがって、 Vue.js は2つの最もよく使われるディレクティブ <code>v-bind</code> と <code>v-on</code> に対して特別な省略記法を提供しています:</p>
+<h2 id="省略記法"><a href="#省略記法" class="headerlink" title="省略記法"></a>省略記法</h2><p><code>v-</code> 接頭子は、テンプレート内の Vue 独自の属性を識別するための目印となっています。これは既存のマークアップに対して、 Vue.js を利用して動的な振る舞いを適用する場合に便利ですが、頻繁に利用されるディレクティブに対しては冗長に感じることがあるでしょう。同時に<a href="https://en.wikipedia.org/wiki/Single-page_application" target="_blank" rel="external">シングルページアプリケーション</a>を作成するにあたり、全てのテンプレートを Vue.js で管理しているとき、<code>v-</code> 接頭子を付ける必要性は低いものになるでしょう。したがって、 Vue.js は 2 つの最もよく使われるディレクティブ <code>v-bind</code> と <code>v-on</code> に対して特別な省略記法を提供しています:</p>
 <h3 id="v-bind-省略記法"><a href="#v-bind-省略記法" class="headerlink" title="v-bind 省略記法"></a><code>v-bind</code> 省略記法</h3><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 完全な構文 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-bind:href</span>=<span class="string">"url"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 省略記法 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">:href</span>=<span class="string">"url"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="v-on-省略記法"><a href="#v-on-省略記法" class="headerlink" title="v-on 省略記法"></a><code>v-on</code> 省略記法</h3><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 完全な構文 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-on:click</span>=<span class="string">"doSomething"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 省略記法 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> @<span class="attr">click</span>=<span class="string">"doSomething"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>これらは普通の HTML とはちょっと違うように見えるかもしれません。ですが、 <code>:</code> や <code>@</code> は属性名に利用可能な文字です。すべての Vue.js のサポートしているブラウザで、正しくパースすることができます。加えて、最終的に描画されるマークアップにそれらは現れません。省略記法の構文の利用は完全に任意ですが、後でその使用方法について詳しく学んだ時に便利と感じることでしょう。</p>
@@ -571,22 +573,22 @@
         <link rel="stylesheet" href="/css/search.css">
         <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
         <script>
-        [
-          '#search-query-nav',
-          '#search-query-sidebar'
-        ].forEach(function (selector) {
-          if (!document.querySelector(selector)) return
-          // search index defaults to v2
-          var match = window.location.pathname.match(/^\/(v\d+)/)
-          var version = match ? match[1] : 'v2'
-          docsearch({
-            appId: 'BH4D9OD16A',
-            apiKey: '0a75952972806d9ad07e387d08e9cc4c',
-            indexName: 'vuejs_jp',
-            inputSelector: selector,
-            algoliaOptions: { facetFilters: ["version:" + version] }
+          [
+            '#search-query-nav',
+            '#search-query-sidebar'
+          ].forEach(function (selector) {
+            if (!document.querySelector(selector)) return
+            // search index defaults to v2
+            var match = window.location.pathname.match(/^\/(v\d+)/)
+            var version = match ? match[1] : 'v2'
+            docsearch({
+              appId: 'BH4D9OD16A',
+              apiKey: '0a75952972806d9ad07e387d08e9cc4c',
+              indexName: 'vuejs_jp',
+              inputSelector: selector,
+              algoliaOptions: { facetFilters: ["version:" + version] }
+            })
           })
-        })
         </script>
 
         <!-- fastclick -->

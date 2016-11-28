@@ -80,6 +80,7 @@
   <a class="nav-link">言語</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><a href="https://vuejs.org/" class="nav-link" target="_blank">英語</a></li>
+    <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
   </ul>
 </li>
 
@@ -134,6 +135,7 @@
   <a class="nav-link">言語</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><a href="https://vuejs.org/" class="nav-link" target="_blank">英語</a></li>
+    <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
   </ul>
 </li>
 
@@ -489,22 +491,23 @@
 <h2 id="スタンドアロン"><a href="#スタンドアロン" class="headerlink" title="スタンドアロン"></a>スタンドアロン</h2><p>ダウンロードし script タグで読み込んでください。<code>Vue</code> はグローバル変数として登録されます。</p>
 <p class="tip">開発中はプロダクションバージョンを使用しないでください。 警告や一般的な間違いを見逃す可能性があります!</p>
 
-<div id="downloads"><br><a class="button" href="/js/vue.js" download="">開発バージョン</a><span class="light info">警告出力とデバッグモードあり </span><br><br><a class="button" href="/js/vue.min.js" download="">プロダクションバージョン</a><span class="light info">警告出力なし、 24.87kb min+gzip</span><br></div>
+<div id="downloads"><br><a class="button" href="/js/vue.js" download="">開発バージョン</a><span class="light info">警告出力とデバッグモードあり </span><br><br><a class="button" href="/js/vue.min.js" download="">プロダクションバージョン</a><span class="light info">警告出力なし、 24.86kb min+gzip</span><br></div>
 
 <h3 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h3><p>推奨: <a href="https://unpkg.com/vue/dist/vue.min.js" target="_blank" rel="external">unpkg</a> は、npm に公開されるとすぐに最新バージョンが反映されます。<a href="https://unpkg.com/vue/" target="_blank" rel="external">unpkg.com/vue/</a> では npm パッケージのソースも確認することができます。</p>
-<p><a href="https://cdn.jsdelivr.net/vue/2.1.1/vue.min.js" target="_blank" rel="external">jsdelivr</a> または <a href="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.1/vue.min.js" target="_blank" rel="external">cdnjs</a> 上でも利用可能です。(同期に少し時間がかかるため、最新版ではない可能性があります)。</p>
+<p><a href="https://cdn.jsdelivr.net/vue/2.1.3/vue.min.js" target="_blank" rel="external">jsdelivr</a> または <a href="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.3/vue.min.js" target="_blank" rel="external">cdnjs</a> 上でも利用可能です。(同期に少し時間がかかるため、最新版ではない可能性があります)。</p>
 <h2 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h2><p>Vue.js による大規模アプリケーションを構築するときには、NPM を利用したインストールを推奨しています。 <a href="http://webpack.github.io/" target="_blank" rel="external">Webpack</a> または <a href="http://browserify.org/" target="_blank" rel="external">Browserify</a> のようモジュールハンドラとうまく組み合わせられます。 Vue は<a href="single-file-components.html">単一ファイルコンポーネント</a>を作成するための、付随するツールも提供しています。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># 最新の安定版</span></div><div class="line">$ npm install vue</div></pre></td></tr></table></figure>
 <h3 id="スタンドアロン-vs-ランタイム限定ビルド"><a href="#スタンドアロン-vs-ランタイム限定ビルド" class="headerlink" title="スタンドアロン vs. ランタイム限定ビルド"></a>スタンドアロン vs. ランタイム限定ビルド</h3><p>スタンドアロンビルドとランタイム限定ビルドの2つのビルドが使用可能です。</p>
 <ul>
 <li><p>スタンドアロンビルドはコンパイラを内蔵しており、 <code>template</code> オプションをサポートしています。 <strong>ブラウザの API に依存しているため、サーバサイドレンダリングに使用することはできません。</strong></p>
 </li>
-<li><p>ランタイム限定ビルドは、テンプレートコンパイラを内蔵しておらず、 <code>template</code> オプションはサポートされていません。ランタイム限定ビルドを使用している場合は <code>render</code> オプションのみ使用することが可能ですが、単一ファイルコンポーネントのテンプレートはビルド時に <code>render</code> 関数をプリコンパイルされるので使用可能です。ランタイム限定ビルドは 17.15 kb min+gzip で、スタンドアロンビルドよりも30%軽量です。</p>
+<li><p>ランタイム限定ビルドは、テンプレートコンパイラを内蔵しておらず、 <code>template</code> オプションはサポートされていません。ランタイム限定ビルドを使用している場合は <code>render</code> オプションのみ使用することが可能ですが、単一ファイルコンポーネントのテンプレートはビルド時に <code>render</code> 関数をプリコンパイルされるので使用可能です。ランタイム限定ビルドは 17.14 kb min+gzip で、スタンドアロンビルドよりも30%軽量です。</p>
 </li>
 </ul>
 <p>NPM パッケージはデフォルトで<strong>ランタイム限定</strong>ビルドを出力します。スタンドアロンビルドを使用する場合は、webpack のコンフィグに下記のエイリアスを追加します。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">resolve: &#123;</div><div class="line">  <span class="attr">alias</span>: &#123;</div><div class="line">    <span class="string">'vue$'</span>: <span class="string">'vue/dist/vue.js'</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>Browserify に関しては、 <a href="https://github.com/benbria/aliasify" target="_blank" rel="external">aliasify</a> を使うことで同じ効果を発揮します。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">resolve: &#123;</div><div class="line">  <span class="attr">alias</span>: &#123;</div><div class="line">    <span class="string">'vue$'</span>: <span class="string">'vue/dist/vue.common.js'</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Browserify に関しては、package.json にエイリアスを追加することができます。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="string">"browser"</span>: &#123;</div><div class="line">  <span class="string">"vue"</span>: <span class="string">"vue/dist/vue.common"</span></div><div class="line">&#125;,</div></pre></td></tr></table></figure>
 <p class="tip"><code>import Vue from &#39;vue/dist/vue&#39;</code> をしないでください - いくつかのツールまたはサードパーティのライブラリもインポートしている可能性があります。これはアプリが同時にランタイムとスタンドアロンビルドをロードするとエラーを引き起こす恐れがあります。</p>
 
 <h3 id="CSP-環境"><a href="#CSP-環境" class="headerlink" title="CSP 環境"></a>CSP 環境</h3><p>Google Chrome アプリのようなある環境では、Content Security Policy (CSP) を強制し、そして式を評価するために <code>new Function()</code> の使用を禁止しています。テンプレートのコンパイルは、スタンドアロンビルドに依存するため、これらの環境では使用できません。</p>
@@ -553,22 +556,22 @@
         <link rel="stylesheet" href="/css/search.css">
         <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
         <script>
-        [
-          '#search-query-nav',
-          '#search-query-sidebar'
-        ].forEach(function (selector) {
-          if (!document.querySelector(selector)) return
-          // search index defaults to v2
-          var match = window.location.pathname.match(/^\/(v\d+)/)
-          var version = match ? match[1] : 'v2'
-          docsearch({
-            appId: 'BH4D9OD16A',
-            apiKey: '0a75952972806d9ad07e387d08e9cc4c',
-            indexName: 'vuejs_jp',
-            inputSelector: selector,
-            algoliaOptions: { facetFilters: ["version:" + version] }
+          [
+            '#search-query-nav',
+            '#search-query-sidebar'
+          ].forEach(function (selector) {
+            if (!document.querySelector(selector)) return
+            // search index defaults to v2
+            var match = window.location.pathname.match(/^\/(v\d+)/)
+            var version = match ? match[1] : 'v2'
+            docsearch({
+              appId: 'BH4D9OD16A',
+              apiKey: '0a75952972806d9ad07e387d08e9cc4c',
+              indexName: 'vuejs_jp',
+              inputSelector: selector,
+              algoliaOptions: { facetFilters: ["version:" + version] }
+            })
           })
-        })
         </script>
 
         <!-- fastclick -->

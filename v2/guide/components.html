@@ -80,6 +80,7 @@
   <a class="nav-link">言語</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><a href="https://vuejs.org/" class="nav-link" target="_blank">英語</a></li>
+    <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
   </ul>
 </li>
 
@@ -134,6 +135,7 @@
   <a class="nav-link">言語</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><a href="https://vuejs.org/" class="nav-link" target="_blank">英語</a></li>
+    <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
   </ul>
 </li>
 
@@ -717,7 +719,7 @@ new Vue({
 <p>は、以下の糖衣構文です:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">v-bind:value</span>=<span class="string">"something"</span> <span class="attr">v-on:input</span>=<span class="string">"something = $event.target.value"</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>コンポーネントと共に使用されるとき、これは簡単にできます:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">v-bind:value</span>=<span class="string">"something"</span> <span class="attr">v-on:input</span>=<span class="string">"something = arguments[0]"</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">custom-input</span> <span class="attr">v-bind:value</span>=<span class="string">"something"</span> <span class="attr">v-on:input</span>=<span class="string">"something = arguments[0]"</span>&gt;</span><span class="tag">&lt;/<span class="name">custom-input</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>そのため、コンポーネントを <code>v-model</code> と共に動かすためには、以下が必要です:</p>
 <ul>
 <li><code>value</code> プロパティを受け入れる</li>
@@ -928,22 +930,22 @@ new Vue({ el: '#currency-input-example' })
         <link rel="stylesheet" href="/css/search.css">
         <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
         <script>
-        [
-          '#search-query-nav',
-          '#search-query-sidebar'
-        ].forEach(function (selector) {
-          if (!document.querySelector(selector)) return
-          // search index defaults to v2
-          var match = window.location.pathname.match(/^\/(v\d+)/)
-          var version = match ? match[1] : 'v2'
-          docsearch({
-            appId: 'BH4D9OD16A',
-            apiKey: '0a75952972806d9ad07e387d08e9cc4c',
-            indexName: 'vuejs_jp',
-            inputSelector: selector,
-            algoliaOptions: { facetFilters: ["version:" + version] }
+          [
+            '#search-query-nav',
+            '#search-query-sidebar'
+          ].forEach(function (selector) {
+            if (!document.querySelector(selector)) return
+            // search index defaults to v2
+            var match = window.location.pathname.match(/^\/(v\d+)/)
+            var version = match ? match[1] : 'v2'
+            docsearch({
+              appId: 'BH4D9OD16A',
+              apiKey: '0a75952972806d9ad07e387d08e9cc4c',
+              indexName: 'vuejs_jp',
+              inputSelector: selector,
+              algoliaOptions: { facetFilters: ["version:" + version] }
+            })
           })
-        })
         </script>
 
         <!-- fastclick -->

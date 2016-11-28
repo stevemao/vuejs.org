@@ -80,6 +80,7 @@
   <a class="nav-link">言語</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><a href="https://vuejs.org/" class="nav-link" target="_blank">英語</a></li>
+    <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
   </ul>
 </li>
 
@@ -134,6 +135,7 @@
   <a class="nav-link">言語</a><span class="arrow"></span>
   <ul class="nav-dropdown">
     <li><a href="https://vuejs.org/" class="nav-link" target="_blank">英語</a></li>
+    <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
   </ul>
 </li>
 
@@ -484,7 +486,7 @@
       <h1>はじめに</h1>
     
     
-    <h2 id="Vue-js-とは？"><a href="#Vue-js-とは？" class="headerlink" title="Vue.js とは？"></a>Vue.js とは？</h2><p>Vue (発音は / v j u ː / 、 <strong>view</strong> と同様）はユーザーインターフェイスを構築するための<strong>プログレッシブフレームワーク</strong>です。他の一枚板な(モノリシック: monolithic)なフレームワークとは異なり、Vue は初めから少しづつ適用していけるように設計されています。中核となるライブラリは view 層だけに焦点を当てているため、Vue.js を使い始めたり、他のライブラリや既存のプロジェクトに統合することはとても簡単です。一方、<a href="single-file-components.html">モダンなツール</a>や<a href="https://github.com/vuejs/awesome-vue#libraries--plugins" target="_blank" rel="external">サポートライブラリ</a>と併せて利用することで、洗練されたシングルページアプリケーションを開発することも可能です。</p>
+    <h2 id="Vue-js-とは？"><a href="#Vue-js-とは？" class="headerlink" title="Vue.js とは？"></a>Vue.js とは？</h2><p>Vue (発音は / v j u ː / 、 <strong>view</strong> と同様）はユーザーインターフェイスを構築するための<strong>プログレッシブフレームワーク</strong>です。他の一枚板(モノリシック: monolithic)なフレームワークとは異なり、Vue は初めから少しづつ適用していけるように設計されています。中核となるライブラリは view 層だけに焦点を当てているため、Vue.js を使い始めたり、他のライブラリや既存のプロジェクトに統合することはとても簡単です。一方、<a href="single-file-components.html">モダンなツール</a>や<a href="https://github.com/vuejs/awesome-vue#libraries--plugins" target="_blank" rel="external">サポートライブラリ</a>と併せて利用することで、洗練されたシングルページアプリケーションを開発することも可能です。</p>
 <p>あなたが経験豊富なフロントエンド開発者で、 Vue.js と他のライブラリ/フレームワークを比較したい場合、<a href="comparison.html">他のフレームワークとの比較</a>を確認してください。</p>
 <h2 id="はじめに"><a href="#はじめに" class="headerlink" title="はじめに"></a>はじめに</h2><p class="tip">公式ガイドは、HTML、CSS そして JavaScript の中レベルのフロントエンドの知識を前提にしています。フロントエンドの開発が初めてであるならば、最初のステップとして、フレームワークに直接入門するのは良いアイデアではないかもしれません。基礎を学んで戻ってきましょう！他のフレームワークでの以前の経験は役に立ちますが、必至ではありません。</p>
 
@@ -527,7 +529,7 @@ var app2 = new Vue({
 </script>
 
 <p>ここには、何か新しいものがあります。<code>v-bind</code> 属性はディレクティブと呼ばれています。ディレクティブは Vue.js によって提供された特別な属性を示すために <code>v-</code> が接頭辞がついており、あなたが推測したように、描画された DOM に特定のリアクティブな振舞いを与えます。ここで宣言されているのは、「この要素の <code>title</code> 属性を Vue インスタンスの <code>message</code> プロパティによって更新して保存する」ということになります。</p>
-<p>あなたの JavaScript コンソールをまた開いて、<code>app2.message = &#39;some new message&#39;</code> を打ち込むと、このケースでは、<code>title</code> 属性が更新されるのを、一度また HTML に束縛されるの確認するでしょう。</p>
+<p>あなたの JavaScript コンソールをまた開いて、<code>app2.message = &#39;some new message&#39;</code> を打ち込むと、このケースでは、<code>title</code> 属性が更新されるのを、一度また HTML に束縛されるのを確認するでしょう。</p>
 <h2 id="条件分岐とループ"><a href="#条件分岐とループ" class="headerlink" title="条件分岐とループ"></a>条件分岐とループ</h2><p>要素の有無を切り替えることも非常にシンプルにできます:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app-3"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-if</span>=<span class="string">"seen"</span>&gt;</span>Now you see me<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> app3 = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">el</span>: <span class="string">'#app-3'</span>,</div><div class="line">  <span class="attr">data</span>: &#123;</div><div class="line">    <span class="attr">seen</span>: <span class="literal">true</span></div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
@@ -655,7 +657,7 @@ var app7 = new Vue({
 <li><p>Vue コンポーネントは、クロスコンポーネントデータフローをはじめ、カスタムイベント通信やビルドツールとの統合など、プレーンなカスタム要素内では利用できないいくつかの重要な機能を提供します。</p>
 </li>
 </ol>
-<h2 id="準備が終わりましたか？"><a href="#準備が終わりましたか？" class="headerlink" title="準備が終わりましたか？"></a>準備が終わりましたか？</h2><p>Vue.js の中核の基本的な機能について手短に紹介しましたが、このガイドの残りでは、基本的な機能だけでなく他の高度な機能についてももっと詳しく扱うので、全てに目を通すようにしてください！</p>
+<h2 id="準備ができましたか？"><a href="#準備ができましたか？" class="headerlink" title="準備ができましたか？"></a>準備ができましたか？</h2><p>Vue.js の中核の基本的な機能について手短に紹介しましたが、このガイドの残りでは、基本的な機能だけでなく他の高度な機能についてももっと詳しく扱うので、全てに目を通すようにしてください！</p>
 
     
       <div class="guide-links">
@@ -694,22 +696,22 @@ var app7 = new Vue({
         <link rel="stylesheet" href="/css/search.css">
         <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
         <script>
-        [
-          '#search-query-nav',
-          '#search-query-sidebar'
-        ].forEach(function (selector) {
-          if (!document.querySelector(selector)) return
-          // search index defaults to v2
-          var match = window.location.pathname.match(/^\/(v\d+)/)
-          var version = match ? match[1] : 'v2'
-          docsearch({
-            appId: 'BH4D9OD16A',
-            apiKey: '0a75952972806d9ad07e387d08e9cc4c',
-            indexName: 'vuejs_jp',
-            inputSelector: selector,
-            algoliaOptions: { facetFilters: ["version:" + version] }
+          [
+            '#search-query-nav',
+            '#search-query-sidebar'
+          ].forEach(function (selector) {
+            if (!document.querySelector(selector)) return
+            // search index defaults to v2
+            var match = window.location.pathname.match(/^\/(v\d+)/)
+            var version = match ? match[1] : 'v2'
+            docsearch({
+              appId: 'BH4D9OD16A',
+              apiKey: '0a75952972806d9ad07e387d08e9cc4c',
+              indexName: 'vuejs_jp',
+              inputSelector: selector,
+              algoliaOptions: { facetFilters: ["version:" + version] }
+            })
           })
-        })
         </script>
 
         <!-- fastclick -->
