@@ -261,18 +261,24 @@ a.button.white {
 #nav .nav-dropdown-container.community {
   margin-left: 20px;
 }
-#nav .nav-dropdown-container.ecosystem {
-  margin-left: 20px;
-}
 #nav .nav-dropdown-container.language {
   margin-left: 20px;
 }
+#nav .nav-dropdown-container.ecosystem ul.nav-dropdown {
+  width: 160px;
+}
+#nav .nav-dropdown-container .arrow {
+  pointer-events: none;
+}
 #nav .nav-dropdown {
   display: none;
+  box-sizing: border-box;
+  max-height: calc(100vh - 61px);
+  overflow-y: scroll;
   position: absolute;
   top: 100%;
   width: 124px;
-  left: 0;
+  right: -15px;
   background-color: #fff;
   padding: 10px 0;
   border: 1px solid #ddd;
@@ -286,11 +292,27 @@ a.button.white {
   margin: 0;
   display: block;
 }
+#nav .nav-dropdown li > ul {
+  padding-left: 0;
+}
+#nav .nav-dropdown li:first-child h4 {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+#nav .nav-dropdown a,
+#nav .nav-dropdown h4 {
+  padding: 0 24px 0 20px;
+}
+#nav .nav-dropdown h4 {
+  margin: 0.45em 0 0;
+  padding-top: 0.45em;
+  border-top: 1px solid #eee;
+}
 #nav .nav-dropdown a {
-  color: #7f8c8d;
+  color: #3a5169;
   font-size: 0.9em;
   display: block;
-  padding: 0 24px 0 20px;
 }
 #nav .nav-dropdown a:hover {
   color: #42b983;
@@ -410,10 +432,12 @@ body.docs #nav {
   background-size: 30px;
 }
 #demo,
-.demo {
+.demo,
+.content .demo {
   border: 1px solid #eee;
   border-radius: 2px;
   padding: 25px 35px;
+  margin-top: 1em;
   margin-bottom: 40px;
   font-size: 1.2em;
   line-height: 1.5em;
@@ -424,53 +448,66 @@ body.docs #nav {
   overflow-x: auto;
 }
 #demo h1,
-.demo h1 {
+.demo h1,
+.content .demo h1 {
   margin: 0 0 0.5em;
   font-size: 1.8em;
 }
 #demo ul,
 .demo ul,
+.content .demo ul,
 #demo ol,
-.demo ol {
+.demo ol,
+.content .demo ol {
   padding-left: 1.5em;
   padding-bottom: 0.2em !important;
 }
 #demo ul:first-child,
 .demo ul:first-child,
+.content .demo ul:first-child,
 #demo ol:first-child,
-.demo ol:first-child {
+.demo ol:first-child,
+.content .demo ol:first-child {
   margin-top: 0;
 }
 #demo ul:last-child,
 .demo ul:last-child,
+.content .demo ul:last-child,
 #demo ol:last-child,
-.demo ol:last-child {
+.demo ol:last-child,
+.content .demo ol:last-child {
   margin-bottom: 0;
 }
 #demo li,
-.demo li {
+.demo li,
+.content .demo li {
   color: #34495e;
 }
 #demo li.done,
-.demo li.done {
+.demo li.done,
+.content .demo li.done {
   color: #7f8c8d;
   text-decoration: line-through;
 }
 #demo p,
-.demo p {
+.demo p,
+.content .demo p {
   margin: 0 !important;
   padding: 0 !important;
 }
 #demo p:first-child,
-.demo p:first-child {
+.demo p:first-child,
+.content .demo p:first-child {
   margin-top: 0;
 }
 #demo p:last-child,
-.demo p:last-child {
+.demo p:last-child,
+.content .demo p:last-child {
   margin-bottom: 0;
 }
 #demo textarea,
-.demo textarea {
+.demo textarea,
+.content .demo textarea {
   width: 100%;
   resize: vertical;
 }
@@ -610,6 +647,10 @@ ul.demo li {
   text-align: center;
   margin-bottom: 20px;
 }
+.sidebar .nav-dropdown h4 {
+  font-weight: normal;
+  margin: 0;
+}
 @media screen and (max-width: 900px) {
   .sidebar {
     position: fixed;
@@ -727,6 +768,7 @@ ul.demo li {
 .content ul,
 .content ol {
   padding-left: 1em;
+  position: inherit;
 }
 .content a {
   color: #42b983;
@@ -743,6 +785,30 @@ ul.demo li {
 }
 .content iframe {
   margin: 1em 0;
+}
+.content > table {
+  border: 2px solid $white;
+  margin: 1.2em auto;
+  padding: 1em;
+}
+.content > table td,
+.content > table th {
+  line-height: 1.6em;
+  padding: 0.5em 1.4em;
+  border: none;
+}
+.content > table td {
+  background-color: #fcfcfc;
+}
+.content > table th {
+  background-color: #42b983;
+  color: #fff;
+  padding-top: 0.85em;
+  padding-bottom: 0.85em;
+  text-align: left;
+}
+.content > table tbody code {
+  background-color: #efefef;
 }
 .content p.tip {
   padding: 12px 24px 12px 30px;

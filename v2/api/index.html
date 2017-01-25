@@ -2,18 +2,18 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-        <title>vue.js</title>
+        <title>Vue.js</title>
         <meta charset="utf-8">
         <meta name="description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
         <meta property="og:type" content="article">
-        <meta property="og:title" content="vue.js">
+        <meta property="og:title" content="Vue.js">
         <meta property="og:description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
         <meta property="og:image" content="https://vuejs.org/images/logo.png">
 
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:title" content="vue.js">
+        <meta name="twitter:title" content="Vue.js">
         <meta name="twitter:description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
         <meta name="twitter:image" content="https://vuejs.org/images/logo.png">
 
@@ -28,6 +28,17 @@
         <!-- this needs to be loaded before guide's inline scripts -->
         <script src="/js/vue.js"></script>
         <script>window.PAGE_TYPE = "api"</script>
+
+        <!-- ga -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-46852172-1', 'vuejs.org');
+          ga('send', 'pageview');
+        </script>
     </head>
     <body class="docs">        <div id="mobile-bar" >
             <a class="menu-button"></a>
@@ -48,39 +59,43 @@
 <li><a href="/v2/api/" class="nav-link current">API</a></li>
 <li><a href="/v2/examples/" class="nav-link">例</a></li>
 <li><a href="/contribution/" class="nav-link">貢献</a></li>
-<li class="nav-dropdown-container">
-  <a class="nav-link">ブログ</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li><a href="https://medium.com/the-vue-point" class="nav-link" target="_blank">英語</a></li>
-    <li><a href="/blog/" class="nav-link">日本語</a></li>
-  </ul>
-</li>
-<li class="nav-dropdown-container community">
-  <a class="nav-link">コミュニティ</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
-    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
-    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット</a></li>
-    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
-    <li><a href="https://vuejsjob.com/?ref=vuejs" class="nav-link" target="_blank">Jobs</a></li>
-  </ul>
-</li>
-
 <li class="nav-dropdown-container ecosystem">
   <a class="nav-link">エコシステム</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://router.vuejs.org/" class="nav-link" target="_blank">vue-router</a></li>
-    <li><a href="https://vuex.vuejs.org/" class="nav-link" target="_blank">vuex</a></li>
-    <li><a href="https://github.com/vuejs/vue-cli" class="nav-link" target="_blank">vue-cli</a></li>
-    <li><a href="https://github.com/vuejs/awesome-vue" class="nav-link" target="_blank">awesome-vue</a></li>
+    <li><h4>ヘルプ</h4></li>
+    <li><ul>
+      <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
+      <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット(公式)</a></li>
+      <li><a href="https://vuejs-jp-slackin.herokuapp.com" class="nav-link" target="_blank">チャット(日本向け)</a></li>
+      <li><a href="https://github.com/vuejs-templates" class="nav-link" target="_blank">テンプレート</a></li>
+    </ul></li>
+    <li><h4>ニュース</h4></li>
+    <li><ul>
+      <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+      <li><a href="https://medium.com/the-vue-point" class="nav-link" target="_blank">ブログ(英語)</a></li>
+      <li><a href="/blog/" class="nav-link" target="_blank">ブログ(日本語訳)</a></li>
+      <li><a href="https://vuejobs.com/?ref=vuejs" class="nav-link" target="_blank">ジョブ(海外)</a></li>
+    </ul></li>
+    <li><h4>コアプラグイン</h4></li>
+    <li><ul>
+      <li><a href="https://router.vuejs.org/" class="nav-link" target="_blank">Vue Router</a></li>
+      <li><a href="https://vuex.vuejs.org/" class="nav-link" target="_blank">Vuex</a></li>
+    </ul></li>
+    <li><h4>リソースリスト</h4></li>
+    <li><ul>
+      <li><a href="https://github.com/vuejs" class="nav-link" target="_blank">公式レポジトリ</a></li>
+      <li><a href="https://github.com/vuejs/awesome-vue" class="nav-link" target="_blank">関連情報</a></li>
+    </ul></li>
   </ul>
 </li>
 
 <li class="nav-dropdown-container language">
   <a class="nav-link">言語</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://vuejs.org/" class="nav-link" target="_blank">英語</a></li>
+    <li><a href="https://vuejs.org/" class="nav-link" target="_blank">English</a></li>
     <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
+    <li><a href="https://ru.vuejs.org/" class="nav-link" target="_blank">Русский</a></li>
+    <li><a href="https://kr.vuejs.org/" class="nav-link" target="_blank">한국어</a></li>
   </ul>
 </li>
 
@@ -103,39 +118,43 @@
 <li><a href="/v2/api/" class="nav-link current">API</a></li>
 <li><a href="/v2/examples/" class="nav-link">例</a></li>
 <li><a href="/contribution/" class="nav-link">貢献</a></li>
-<li class="nav-dropdown-container">
-  <a class="nav-link">ブログ</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li><a href="https://medium.com/the-vue-point" class="nav-link" target="_blank">英語</a></li>
-    <li><a href="/blog/" class="nav-link">日本語</a></li>
-  </ul>
-</li>
-<li class="nav-dropdown-container community">
-  <a class="nav-link">コミュニティ</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
-    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
-    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット</a></li>
-    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
-    <li><a href="https://vuejsjob.com/?ref=vuejs" class="nav-link" target="_blank">Jobs</a></li>
-  </ul>
-</li>
-
 <li class="nav-dropdown-container ecosystem">
   <a class="nav-link">エコシステム</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://router.vuejs.org/" class="nav-link" target="_blank">vue-router</a></li>
-    <li><a href="https://vuex.vuejs.org/" class="nav-link" target="_blank">vuex</a></li>
-    <li><a href="https://github.com/vuejs/vue-cli" class="nav-link" target="_blank">vue-cli</a></li>
-    <li><a href="https://github.com/vuejs/awesome-vue" class="nav-link" target="_blank">awesome-vue</a></li>
+    <li><h4>ヘルプ</h4></li>
+    <li><ul>
+      <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
+      <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット(公式)</a></li>
+      <li><a href="https://vuejs-jp-slackin.herokuapp.com" class="nav-link" target="_blank">チャット(日本向け)</a></li>
+      <li><a href="https://github.com/vuejs-templates" class="nav-link" target="_blank">テンプレート</a></li>
+    </ul></li>
+    <li><h4>ニュース</h4></li>
+    <li><ul>
+      <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+      <li><a href="https://medium.com/the-vue-point" class="nav-link" target="_blank">ブログ(英語)</a></li>
+      <li><a href="/blog/" class="nav-link" target="_blank">ブログ(日本語訳)</a></li>
+      <li><a href="https://vuejobs.com/?ref=vuejs" class="nav-link" target="_blank">ジョブ(海外)</a></li>
+    </ul></li>
+    <li><h4>コアプラグイン</h4></li>
+    <li><ul>
+      <li><a href="https://router.vuejs.org/" class="nav-link" target="_blank">Vue Router</a></li>
+      <li><a href="https://vuex.vuejs.org/" class="nav-link" target="_blank">Vuex</a></li>
+    </ul></li>
+    <li><h4>リソースリスト</h4></li>
+    <li><ul>
+      <li><a href="https://github.com/vuejs" class="nav-link" target="_blank">公式レポジトリ</a></li>
+      <li><a href="https://github.com/vuejs/awesome-vue" class="nav-link" target="_blank">関連情報</a></li>
+    </ul></li>
   </ul>
 </li>
 
 <li class="nav-dropdown-container language">
   <a class="nav-link">言語</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://vuejs.org/" class="nav-link" target="_blank">英語</a></li>
+    <li><a href="https://vuejs.org/" class="nav-link" target="_blank">English</a></li>
     <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
+    <li><a href="https://ru.vuejs.org/" class="nav-link" target="_blank">Русский</a></li>
+    <li><a href="https://kr.vuejs.org/" class="nav-link" target="_blank">한국어</a></li>
   </ul>
 </li>
 
@@ -233,13 +252,23 @@
 </blockquote>
 </li>
 </ul>
+<h3 id="ignoredElements"><a href="#ignoredElements" class="headerlink" title="ignoredElements"></a>ignoredElements</h3><ul>
+<li><p><strong>型:</strong> <code>Array&lt;string&gt;</code></p>
+</li>
+<li><p><strong>デフォルト:</strong> <code>[]</code></p>
+</li>
+<li><p><strong>使用方法:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.config.ignoredElements = [</div><div class="line">  <span class="string">'my-custom-web-component'</span>, <span class="string">'another-web-component'</span></div><div class="line">]</div></pre></td></tr></table></figure>
+<p>Vue の外部に定義されたカスタム要素を無視するようにします(例: Web Components の API を使用)。それ以外の場合は、グローバルコンポーネントを登録することを忘れたまたはコンポーネント名のスペルミスしたと仮定すると、<code>不明なカスタム要素</code>に関する警告がスローされます。</p>
+</li>
+</ul>
 <h3 id="keyCodes"><a href="#keyCodes" class="headerlink" title="keyCodes"></a>keyCodes</h3><ul>
-<li><p><strong>型:</strong> <code>{ [key: string]: number }</code></p>
+<li><p><strong>型:</strong> <code>{ [key: string]: number | Array&lt;number&gt; }</code></p>
 </li>
 <li><p><strong>デフォルト:</strong> <code>{}</code></p>
 </li>
 <li><p><strong>使用方法:</strong></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.config.keyCodes = &#123;</div><div class="line">  <span class="attr">v</span>: <span class="number">86</span>,</div><div class="line">  <span class="attr">f1</span>: <span class="number">112</span>,</div><div class="line">  <span class="attr">mediaPlayPause</span>: <span class="number">179</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.config.keyCodes = &#123;</div><div class="line">  <span class="attr">v</span>: <span class="number">86</span>,</div><div class="line">  <span class="attr">f1</span>: <span class="number">112</span>,</div><div class="line">  <span class="attr">mediaPlayPause</span>: <span class="number">179</span>,</div><div class="line">  <span class="attr">up</span>: [<span class="number">38</span>, <span class="number">87</span>]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><code>v-on</code> 向けにカスタムキーエイリアスを定義します。</p>
 </li>
 </ul>
@@ -451,12 +480,14 @@
 </li>
 </ul>
 <h3 id="computed"><a href="#computed" class="headerlink" title="computed"></a>computed</h3><ul>
-<li><p><strong>型:</strong> <code>{ [key: string]: Function | { get: Function, set: Function } }</code></p>
+<li><p><strong>型:</strong> <code>{ [key: string]: Function | { get: Function, set: Function, cache: Boolean } }</code></p>
 </li>
 <li><p><strong>詳細:</strong></p>
 <p>Vue インスタンスに組み込まれる算出プロパティ (Computed property) です。すべての getter や setter は、自動的に Vue インスタンスに束縛された <code>this</code> コンテキストを持ちます。</p>
-<p>算出プロパティはキャッシュされ、そしてリアクティブ依存が変更されたときにだけ再算出します。</p>
 <p class="tip"><strong>算出プロパティ(例 <code>aDouble: () =&gt; this.a * 2</code>) を定義するためにアロー関数を使用すべきではないこと</strong>に注意してください。アロー関数は、<code>this</code> が期待する Vue インスタンスではなく、<code>this.a</code> が undefined になるため、親コンテキストに束縛できないことが理由です。</p>
+
+<p>算出プロパティはキャッシュされ、そしてリアクティブ依存が変更されたときにだけ再算出します。あるの依存関係がインスタンスのスコープ外の(つまりリアクティブではない)場合、算出プロパティは更新されないことに注意してください。このような状況では、<code>cache: false</code> を設定することでキャッシングをオフにすることができますが、依存関係は依然としてリアクティブではないため、それを変更しても DOM の更新はトリガーされません。</p>
+<p>ほとんどの場合、<code>cache: false</code> は理想的な解決策ではありません。可能な限り、外部データをリアクティブシステムに取り込む方がはるかに優れています。例えば、算出プロパティがウィンドウのサイズに依存する場合、この情報を <code>data</code> に格納し、<code>resize</code> イベントを使用して値を最新の状態に保つことができます。まさしくリアクティブです！</p>
 </li>
 <li><p><strong>例:</strong></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">data</span>: &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;,</div><div class="line">  <span class="attr">computed</span>: &#123;</div><div class="line">    <span class="comment">// get のみ。必要なのは関数一つだけ</span></div><div class="line">    aDouble: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.a * <span class="number">2</span></div><div class="line">    &#125;,</div><div class="line">    <span class="comment">// get と set 両方</span></div><div class="line">    aPlus: &#123;</div><div class="line">      <span class="attr">get</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.a + <span class="number">1</span></div><div class="line">      &#125;,</div><div class="line">      <span class="attr">set</span>: <span class="function"><span class="keyword">function</span> (<span class="params">v</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.a = v - <span class="number">1</span></div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line">vm.aPlus   <span class="comment">// -&gt; 2</span></div><div class="line">vm.aPlus = <span class="number">3</span></div><div class="line">vm.a       <span class="comment">// -&gt; 2</span></div><div class="line">vm.aDouble <span class="comment">// -&gt; 4</span></div></pre></td></tr></table></figure>
@@ -813,7 +844,7 @@
 </li>
 <li><p><strong>例:</strong></p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">blog-post</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h1</span> <span class="attr">slot</span>=<span class="string">"header"</span>&gt;</span></div><div class="line">    About Me</div><div class="line">  <span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>Here's some page content, which will be included in vm.$slots.default, because it's not inside a named slot.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">p</span> <span class="attr">slot</span>=<span class="string">"footer"</span>&gt;</span></div><div class="line">    Copyright 2016 Evan You</div><div class="line">  <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>If I have some content down here, it will also be included in vm.$slots.default.<span class="tag">&lt;/<span class="name">p</span>&gt;</span>.</div><div class="line"><span class="tag">&lt;/<span class="name">blog-post</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.component(<span class="string">'blog-post'</span>, &#123;</div><div class="line">  <span class="attr">render</span>: <span class="function"><span class="keyword">function</span> (<span class="params">createElement</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> header = <span class="keyword">this</span>.$slots.header</div><div class="line">    <span class="keyword">var</span> body   = <span class="keyword">this</span>.$slots.default</div><div class="line">    <span class="keyword">var</span> footer = <span class="keyword">this</span>.$slots.footer</div><div class="line">    <span class="keyword">return</span> createElement(<span class="string">'div'</span>, [</div><div class="line">      createElement(<span class="string">'header'</span>, header)</div><div class="line">      createElement(<span class="string">'main'</span>, body)</div><div class="line">      createElement(<span class="string">'footer'</span>, footer)</div><div class="line">    ])</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.component(<span class="string">'blog-post'</span>, &#123;</div><div class="line">  <span class="attr">render</span>: <span class="function"><span class="keyword">function</span> (<span class="params">createElement</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> header = <span class="keyword">this</span>.$slots.header</div><div class="line">    <span class="keyword">var</span> body   = <span class="keyword">this</span>.$slots.default</div><div class="line">    <span class="keyword">var</span> footer = <span class="keyword">this</span>.$slots.footer</div><div class="line">    <span class="keyword">return</span> createElement(<span class="string">'div'</span>, [</div><div class="line">      createElement(<span class="string">'header'</span>, header),</div><div class="line">      createElement(<span class="string">'main'</span>, body),</div><div class="line">      createElement(<span class="string">'footer'</span>, footer)</div><div class="line">    ])</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 </li>
 <li><p><strong>参照:</strong></p>
 <ul>
@@ -1113,6 +1144,7 @@
 <li><p><strong>使用方法:</strong></p>
 <p>バインディングの値の真偽値に基いて要素の描画を行います。要素および、ディレクティブまたはコンポーネントを含むコンテンツは、トグルしている間に破壊され再構築されます。要素が <code>&lt;template&gt;</code> 要素ならば、その内容は状態ブロックとして抽出されます。</p>
 <p>このディレクティブは条件が変更されたとき、トランジションをトリガーします。</p>
+<p class="tip"><code>v-if</code> といっしょに使用されるとき、<code>v-for</code> は <code>v-if</code> より優先度が高くなります。詳細については<a href="../guide/list.html#v-for-と-v-if">リストレンダリングのガイド</a>を参照してください。</p>
 </li>
 <li><p><strong>参照:</strong> <a href="../guide/conditional.html">条件付きレンダリング - v-if</a></p>
 </li>
@@ -1157,6 +1189,8 @@
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">"(item, index) in items"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">"(val, key) in object"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">"(val, key, index) in object"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <p><code>v-for</code> のデフォルトの振舞いは、それらを移動しないで所定の位置の要素にパッチを適用しようとします。要素の順序を変更するのを強制するためには、<code>key</code> という特別な属性によって順序のヒントを提供する必要があります:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">"item in items"</span> <span class="attr">:key</span>=<span class="string">"item.id"</span>&gt;</span></div><div class="line">  &#123;&#123; item.text &#125;&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p class="tip"><code>v-if</code> といっしょに使用されるとき、<code>v-for</code> は <code>v-if</code> より優先度が高くなります。詳細については<a href="../guide/list.html#v-for-と-v-if">リストレンダリングのガイド</a>を参照してください。</p>
+
 <p><code>v-for</code> の詳細な使用方法は下記にリンクしたガイドセクション内で説明しています。</p>
 </li>
 <li><p><strong>参照:</strong></p>
@@ -1181,6 +1215,7 @@
 <li><code>.self</code> - イベントがこの要素からディスパッチされたときだけハンドラをトリガします。</li>
 <li><code>.{keyCode | keyAlias}</code> - 指定したキーが押された時のみトリガされるハンドラです。</li>
 <li><code>.native</code> - コンポーネントのルート要素上のネイティブイベントに対して購読します。</li>
+<li><code>.once</code> - 最大1回、ハンドラをトリガします。</li>
 </ul>
 </li>
 <li><p><strong>使用方法:</strong></p>
@@ -1189,7 +1224,7 @@
 <p>ネイティブな DOM イベントを購読しているとき、メソッドはネイティブなイベントを引数としてだけ受信します。インラインステートメントで使用する場合、ステートメントでは特別な <code>$event</code> プロパティに <code>v-on:click=&quot;handle(&#39;ok&#39;, $event)&quot;</code> のようにしてアクセスすることができます。</p>
 </li>
 <li><p><strong>例:</strong></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- メソッドハンドラ --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- インラインステートメント --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">"doThat('hello', $event)"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 省略記法 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- イベント伝播の停止 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click.stop</span>=<span class="string">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- デフォルト挙動を防ぐ --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click.prevent</span>=<span class="string">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 式なしでデフォルト挙動を防ぐ --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">form</span> @<span class="attr">submit.prevent</span>&gt;</span><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 修飾子の繋ぎ合わせ --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click.stop.prevent</span>=<span class="string">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- キーエイリアスを使ったキー修飾子 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> @<span class="attr">keyup.enter</span>=<span class="string">"onEnter"</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- キーコードを使ったキー修飾子 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> @<span class="attr">keyup.13</span>=<span class="string">"onEnter"</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- メソッドハンドラ --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- インラインステートメント --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">"doThat('hello', $event)"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 省略記法 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- イベント伝播の停止 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click.stop</span>=<span class="string">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- デフォルト挙動を防ぐ --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click.prevent</span>=<span class="string">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 式なしでデフォルト挙動を防ぐ --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">form</span> @<span class="attr">submit.prevent</span>&gt;</span><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 修飾子の繋ぎ合わせ --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click.stop.prevent</span>=<span class="string">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- キーエイリアスを使ったキー修飾子 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> @<span class="attr">keyup.enter</span>=<span class="string">"onEnter"</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- キーコードを使ったキー修飾子 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> @<span class="attr">keyup.13</span>=<span class="string">"onEnter"</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 最大1回、クリックイベントはトリガーされます --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click.once</span>=<span class="string">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>子コンポーネント上のカスタムイベントを購読できます (ハンドラは “my-event” が子コンポーネント上で発行された時に呼ばれる):</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">my-component</span> @<span class="attr">my-event</span>=<span class="string">"handleThis"</span>&gt;</span><span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- インラインステートメント --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">my-component</span> @<span class="attr">my-event</span>=<span class="string">"handleThis(123, $event)"</span>&gt;</span><span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- コンポーネント上のネイティブイベント --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">my-component</span> @<span class="attr">click.native</span>=<span class="string">"onClick"</span>&gt;</span><span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></div></pre></td></tr></table></figure>
 </li>
@@ -1220,7 +1255,7 @@
 <p>引数なしで使用した場合、名前-値のペアの属性を含むオブジェクトを束縛するため使用することができます。このモードでは、<code>class</code> と <code>style</code> では配列とオブジェクトをサポートしないことに注意してください。</p>
 </li>
 <li><p><strong>例:</strong></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 属性を束縛 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">v-bind:src</span>=<span class="string">"imageSrc"</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 省略記法 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">:src</span>=<span class="string">"imageSrc"</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- クラスバインディング --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">:class</span>=<span class="string">"&#123; red: isRed &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">:class</span>=<span class="string">"[classA, classB]"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">:class</span>=<span class="string">"[classA, &#123; classB: isB, classC: isC &#125;]"</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- スタイルバインディング --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">:style</span>=<span class="string">"&#123; fontSize: size + 'px' &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">:style</span>=<span class="string">"[styleObjectA, styleObjectB]"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 属性のオブジェクトのバインディング --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind</span>=<span class="string">"&#123; id: someProp, 'other-attr': otherProp &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- prop 修飾子による DOM 属性バインディング --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:text-content.prop</span>=<span class="string">"text"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- prop バインディング。"prop" は my-component 内で宣言される必要があります --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">my-component</span> <span class="attr">:prop</span>=<span class="string">"someThing"</span>&gt;</span><span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- XLink --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">svg</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">:xlink:special</span>=<span class="string">"foo"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 属性を束縛 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">v-bind:src</span>=<span class="string">"imageSrc"</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 省略記法 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">:src</span>=<span class="string">"imageSrc"</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- インライン文字列連結 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">:src</span>=<span class="string">"'/path/to/images/' + fileName"</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- クラスバインディング --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">:class</span>=<span class="string">"&#123; red: isRed &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">:class</span>=<span class="string">"[classA, classB]"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">:class</span>=<span class="string">"[classA, &#123; classB: isB, classC: isC &#125;]"</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- スタイルバインディング --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">:style</span>=<span class="string">"&#123; fontSize: size + 'px' &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">:style</span>=<span class="string">"[styleObjectA, styleObjectB]"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 属性のオブジェクトのバインディング --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind</span>=<span class="string">"&#123; id: someProp, 'other-attr': otherProp &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- prop 修飾子による DOM 属性バインディング --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:text-content.prop</span>=<span class="string">"text"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- prop バインディング。"prop" は my-component 内で宣言される必要があります --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">my-component</span> <span class="attr">:prop</span>=<span class="string">"someThing"</span>&gt;</span><span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- XLink --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">svg</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">:xlink:special</span>=<span class="string">"foo"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></div></pre></td></tr></table></figure>
 <p><code>.camel</code> 修飾子はDOM 内のテンプレートを使用するときに、<code>v-bind</code> 属性名をキャメル化することを可能にします。e.g. SVG の <code>viewBox</code> 属性:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">:view-box.camel</span>=<span class="string">"viewBox"</span>&gt;</span><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>文字列テンプレートを使用している場合や、<code>vue-loader</code> / <code>vueify</code> でコンパイルしている場合は <code>.camel</code> は必要ありません。</p>
@@ -1251,7 +1286,7 @@
 </ul>
 </li>
 <li><p><strong>使用方法:</strong></p>
-<p>form input 要素またはコンポーネント上に双方向バインディングを作成します。詳細は下にリンクしたガイドセクションを参照してください。</p>
+<p>form の input 要素またはコンポーネント上に双方向バインディングを作成します。使い方と注意事項の詳細は、下にリンクしたガイドセクションを参照してください。</p>
 </li>
 <li><p><strong>See also:</strong></p>
 <ul>
@@ -1354,23 +1389,29 @@
 <li><code>mode</code> - string、leaving/entering トランジションのタイミングシーケンスを制御する。利用可能なモードは、<code>&quot;out-in&quot;</code>、<code>&quot;in-out&quot;</code>。デフォルトは同時になる。</li>
 <li><code>enter-class</code> - string</li>
 <li><code>leave-class</code> - string</li>
+<li><code>appear-class</code> - string</li>
+<li><code>enter-to-class</code> - string</li>
+<li><code>leave-to-class</code> - string</li>
+<li><code>appear-to-class</code> - string</li>
 <li><code>enter-active-class</code> - string</li>
 <li><code>leave-active-class</code> - string</li>
-<li><code>appear-class</code> - string</li>
 <li><code>appear-active-class</code> - string</li>
 </ul>
 </li>
 <li><p><strong>イベント:</strong></p>
 <ul>
 <li><code>before-enter</code></li>
-<li><code>enter</code></li>
-<li><code>after-enter</code></li>
 <li><code>before-leave</code></li>
-<li><code>leave</code></li>
-<li><code>after-leave</code></li>
 <li><code>before-appear</code></li>
+<li><code>enter</code></li>
+<li><code>leave</code></li>
 <li><code>appear</code></li>
+<li><code>after-enter</code></li>
+<li><code>after-leave</code></li>
 <li><code>after-appear</code></li>
+<li><code>enter-cancelled</code></li>
+<li><code>leave-cancelled</code> (<code>v-show</code> only)</li>
+<li><code>appear-cancelled</code></li>
 </ul>
 </li>
 <li><p><strong>使用方法:</strong></p>
@@ -1457,21 +1498,11 @@
             <script src="/js/smooth-scroll.min.js"></script>
         
 
-        <!-- main custom script for sidebars, version selects etc. -->
+        <!-- main custom script for sidebars, version selects etc. -->        
+        <script src="/js/css.escape.js"></script>
         <script src="/js/common.js"></script>
 
-        <!-- ga -->
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-          ga('create', 'UA-46852172-1', 'vuejs.org');
-          ga('send', 'pageview');
-        </script>
-
-       <!-- search -->
+        <!-- search -->
         <link href="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="/css/search.css">
         <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>

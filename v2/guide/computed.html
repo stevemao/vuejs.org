@@ -2,18 +2,18 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-        <title>算出プロパティとウォッチャ - vue.js</title>
+        <title>算出プロパティとウォッチャ - Vue.js</title>
         <meta charset="utf-8">
         <meta name="description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
         <meta property="og:type" content="article">
-        <meta property="og:title" content="算出プロパティとウォッチャ - vue.js">
+        <meta property="og:title" content="算出プロパティとウォッチャ - Vue.js">
         <meta property="og:description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
         <meta property="og:image" content="https://vuejs.org/images/logo.png">
 
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:title" content="算出プロパティとウォッチャ - vue.js">
+        <meta name="twitter:title" content="算出プロパティとウォッチャ - Vue.js">
         <meta name="twitter:description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
         <meta name="twitter:image" content="https://vuejs.org/images/logo.png">
 
@@ -28,6 +28,17 @@
         <!-- this needs to be loaded before guide's inline scripts -->
         <script src="/js/vue.js"></script>
         <script>window.PAGE_TYPE = "guide"</script>
+
+        <!-- ga -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-46852172-1', 'vuejs.org');
+          ga('send', 'pageview');
+        </script>
     </head>
     <body class="docs">        <div id="mobile-bar" >
             <a class="menu-button"></a>
@@ -48,39 +59,43 @@
 <li><a href="/v2/api/" class="nav-link">API</a></li>
 <li><a href="/v2/examples/" class="nav-link">例</a></li>
 <li><a href="/contribution/" class="nav-link">貢献</a></li>
-<li class="nav-dropdown-container">
-  <a class="nav-link">ブログ</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li><a href="https://medium.com/the-vue-point" class="nav-link" target="_blank">英語</a></li>
-    <li><a href="/blog/" class="nav-link">日本語</a></li>
-  </ul>
-</li>
-<li class="nav-dropdown-container community">
-  <a class="nav-link">コミュニティ</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
-    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
-    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット</a></li>
-    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
-    <li><a href="https://vuejsjob.com/?ref=vuejs" class="nav-link" target="_blank">Jobs</a></li>
-  </ul>
-</li>
-
 <li class="nav-dropdown-container ecosystem">
   <a class="nav-link">エコシステム</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://router.vuejs.org/" class="nav-link" target="_blank">vue-router</a></li>
-    <li><a href="https://vuex.vuejs.org/" class="nav-link" target="_blank">vuex</a></li>
-    <li><a href="https://github.com/vuejs/vue-cli" class="nav-link" target="_blank">vue-cli</a></li>
-    <li><a href="https://github.com/vuejs/awesome-vue" class="nav-link" target="_blank">awesome-vue</a></li>
+    <li><h4>ヘルプ</h4></li>
+    <li><ul>
+      <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
+      <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット(公式)</a></li>
+      <li><a href="https://vuejs-jp-slackin.herokuapp.com" class="nav-link" target="_blank">チャット(日本向け)</a></li>
+      <li><a href="https://github.com/vuejs-templates" class="nav-link" target="_blank">テンプレート</a></li>
+    </ul></li>
+    <li><h4>ニュース</h4></li>
+    <li><ul>
+      <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+      <li><a href="https://medium.com/the-vue-point" class="nav-link" target="_blank">ブログ(英語)</a></li>
+      <li><a href="/blog/" class="nav-link" target="_blank">ブログ(日本語訳)</a></li>
+      <li><a href="https://vuejobs.com/?ref=vuejs" class="nav-link" target="_blank">ジョブ(海外)</a></li>
+    </ul></li>
+    <li><h4>コアプラグイン</h4></li>
+    <li><ul>
+      <li><a href="https://router.vuejs.org/" class="nav-link" target="_blank">Vue Router</a></li>
+      <li><a href="https://vuex.vuejs.org/" class="nav-link" target="_blank">Vuex</a></li>
+    </ul></li>
+    <li><h4>リソースリスト</h4></li>
+    <li><ul>
+      <li><a href="https://github.com/vuejs" class="nav-link" target="_blank">公式レポジトリ</a></li>
+      <li><a href="https://github.com/vuejs/awesome-vue" class="nav-link" target="_blank">関連情報</a></li>
+    </ul></li>
   </ul>
 </li>
 
 <li class="nav-dropdown-container language">
   <a class="nav-link">言語</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://vuejs.org/" class="nav-link" target="_blank">英語</a></li>
+    <li><a href="https://vuejs.org/" class="nav-link" target="_blank">English</a></li>
     <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
+    <li><a href="https://ru.vuejs.org/" class="nav-link" target="_blank">Русский</a></li>
+    <li><a href="https://kr.vuejs.org/" class="nav-link" target="_blank">한국어</a></li>
   </ul>
 </li>
 
@@ -103,39 +118,43 @@
 <li><a href="/v2/api/" class="nav-link">API</a></li>
 <li><a href="/v2/examples/" class="nav-link">例</a></li>
 <li><a href="/contribution/" class="nav-link">貢献</a></li>
-<li class="nav-dropdown-container">
-  <a class="nav-link">ブログ</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li><a href="https://medium.com/the-vue-point" class="nav-link" target="_blank">英語</a></li>
-    <li><a href="/blog/" class="nav-link">日本語</a></li>
-  </ul>
-</li>
-<li class="nav-dropdown-container community">
-  <a class="nav-link">コミュニティ</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
-    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
-    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット</a></li>
-    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
-    <li><a href="https://vuejsjob.com/?ref=vuejs" class="nav-link" target="_blank">Jobs</a></li>
-  </ul>
-</li>
-
 <li class="nav-dropdown-container ecosystem">
   <a class="nav-link">エコシステム</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://router.vuejs.org/" class="nav-link" target="_blank">vue-router</a></li>
-    <li><a href="https://vuex.vuejs.org/" class="nav-link" target="_blank">vuex</a></li>
-    <li><a href="https://github.com/vuejs/vue-cli" class="nav-link" target="_blank">vue-cli</a></li>
-    <li><a href="https://github.com/vuejs/awesome-vue" class="nav-link" target="_blank">awesome-vue</a></li>
+    <li><h4>ヘルプ</h4></li>
+    <li><ul>
+      <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
+      <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット(公式)</a></li>
+      <li><a href="https://vuejs-jp-slackin.herokuapp.com" class="nav-link" target="_blank">チャット(日本向け)</a></li>
+      <li><a href="https://github.com/vuejs-templates" class="nav-link" target="_blank">テンプレート</a></li>
+    </ul></li>
+    <li><h4>ニュース</h4></li>
+    <li><ul>
+      <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+      <li><a href="https://medium.com/the-vue-point" class="nav-link" target="_blank">ブログ(英語)</a></li>
+      <li><a href="/blog/" class="nav-link" target="_blank">ブログ(日本語訳)</a></li>
+      <li><a href="https://vuejobs.com/?ref=vuejs" class="nav-link" target="_blank">ジョブ(海外)</a></li>
+    </ul></li>
+    <li><h4>コアプラグイン</h4></li>
+    <li><ul>
+      <li><a href="https://router.vuejs.org/" class="nav-link" target="_blank">Vue Router</a></li>
+      <li><a href="https://vuex.vuejs.org/" class="nav-link" target="_blank">Vuex</a></li>
+    </ul></li>
+    <li><h4>リソースリスト</h4></li>
+    <li><ul>
+      <li><a href="https://github.com/vuejs" class="nav-link" target="_blank">公式レポジトリ</a></li>
+      <li><a href="https://github.com/vuejs/awesome-vue" class="nav-link" target="_blank">関連情報</a></li>
+    </ul></li>
   </ul>
 </li>
 
 <li class="nav-dropdown-container language">
   <a class="nav-link">言語</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://vuejs.org/" class="nav-link" target="_blank">英語</a></li>
+    <li><a href="https://vuejs.org/" class="nav-link" target="_blank">English</a></li>
     <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
+    <li><a href="https://ru.vuejs.org/" class="nav-link" target="_blank">Русский</a></li>
+    <li><a href="https://kr.vuejs.org/" class="nav-link" target="_blank">한국어</a></li>
   </ul>
 </li>
 
@@ -367,7 +386,7 @@
                 
                 
                 <li>
-                    <a href="/v2/guide/deployment.html" class="sidebar-link">本番環境への配信</a>
+                    <a href="/v2/guide/deployment.html" class="sidebar-link">プロダクション環境への配信のヒント</a>
                 </li>
             
                 
@@ -408,6 +427,16 @@
                 
                 <li>
                     <a href="/v2/guide/ssr.html" class="sidebar-link">サーバサイドレンダリング</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/v2/guide/typescript.html" class="sidebar-link">TypeScript のサポート</a>
                 </li>
             
                 
@@ -515,7 +544,7 @@ var vm = new Vue({
 <p>ここでは、算出プロパティ <code>reversedMessage</code> を宣言しました。私たちが提供した機能は、プロパティ <code>vm.reversedMessage</code> に対する getter 関数として利用されます:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(vm.reversedMessage) <span class="comment">// -&gt; 'olleH'</span></div><div class="line">vm.message = <span class="string">'Goodbye'</span></div><div class="line"><span class="built_in">console</span>.log(vm.reversedMessage) <span class="comment">// -&gt; 'eybdooG'</span></div></pre></td></tr></table></figure>
 <p>コンソールを開いて、vm で遊んでみてください。<code>vm.reversedMessage</code> の値は、常に <code>vm.message</code> の値に依存しています。</p>
-<p>通常のプロパティと同じように、テンプレート内の算出プロパティにデータバインドすることもできます。Vue は <code>vm.reversedMessage</code> が <code>vm.message</code> に依存していることを知っているので、<code>vm.message</code> が変わると <code>vm.reversedMessage</code> に依存する全てのバインディングを更新します。さらに、最も良いところは、この依存関係が宣言的に作成されていることです。算出 getter 関数は純粋で副作用がないので、テストや値の推論が容易になります。</p>
+<p>通常のプロパティと同じように、テンプレート内の算出プロパティにデータバインドすることもできます。Vue は <code>vm.reversedMessage</code> が <code>vm.message</code> に依存していることを知っているので、<code>vm.message</code> が変わると <code>vm.reversedMessage</code> に依存する全てのバインディングを更新します。さらに、最も良いところは、この依存関係が宣言的に作成されていることです。算出 getter 関数は副作用がないので、テストや値の推論が容易になります。</p>
 <h3 id="算出プロパティ-vs-メソッド"><a href="#算出プロパティ-vs-メソッド" class="headerlink" title="算出プロパティ vs メソッド"></a>算出プロパティ vs メソッド</h3><p>こういった式を持つメソッドを呼び出すことで、同じ結果が実現できることに気付いたかもしれません:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Reversed message: "&#123;&#123; reverseMessage() &#125;&#125;"<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// コンポーネント内</span></div><div class="line">methods: &#123;</div><div class="line">  <span class="attr">reverseMessage</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.message.split(<span class="string">''</span>).reverse().join(<span class="string">''</span>)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -536,7 +565,7 @@ var vm = new Vue({
 <h2 id="ウォッチャ"><a href="#ウォッチャ" class="headerlink" title="ウォッチャ"></a>ウォッチャ</h2><p>多くの場合では算出プロパティの方が適切ではありますが、カスタムウォッチャが必要な時もあるでしょう。データの変更に対して反応する、より汎用的な <code>watch</code> オプションを Vue が提供しているのはそのためです。データが変わるのに応じて非同期やコストの高い処理を実行したいときに最も便利です。</p>
 <p>例:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"watch-example"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">    Ask a yes/no question:</div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model</span>=<span class="string">"question"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123; answer &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- ajax ライブラリの豊富なエコシステムや、汎用的なユーティリティ	--&gt;</span></div><div class="line"><span class="comment">&lt;!-- メソッドがたくさんあるので、Vue のコアはそれらを再発明せずに		--&gt;</span></div><div class="line"><span class="comment">&lt;!-- 小さく保たれています。この結果として、慣れ親しんでいるものだけを	--&gt;</span></div><div class="line"><span class="comment">&lt;!-- 使えるような自由さを Vue は持ち合わせています。			--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/axios@0.12.0/dist/axios.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/lodash@4.13.1/lodash.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="keyword">var</span> watchExampleVM = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">el</span>: <span class="string">'#watch-example'</span>,</div><div class="line">  <span class="attr">data</span>: &#123;</div><div class="line">    <span class="attr">question</span>: <span class="string">''</span>,</div><div class="line">    <span class="attr">answer</span>: <span class="string">'I cannot give you an answer until you ask a question!'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">watch</span>: &#123;</div><div class="line">    <span class="comment">// この関数は questions が変わるごとに実行されます。</span></div><div class="line">    question: <span class="function"><span class="keyword">function</span> (<span class="params">newQuestion</span>) </span>&#123;</div><div class="line">      <span class="keyword">this</span>.answer = <span class="string">'Waiting for you to stop typing...'</span></div><div class="line">      <span class="keyword">this</span>.getAnswer()</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">methods</span>: &#123;</div><div class="line">    <span class="comment">// _.debounce は特にコストの高い処理の実行を制御するための</span></div><div class="line">    <span class="comment">// lodash の関数です。この場合は、どのくらい頻繁に yesno.wtf/api</span></div><div class="line">    <span class="comment">// へのアクセスすべきかを制限するために、ユーザーの入力が完全に</span></div><div class="line">    <span class="comment">// 終わるのを待ってから ajax リクエストを実行しています。</span></div><div class="line">    <span class="comment">// _.debounce (とその親戚である _.throttle )  についての詳細は</span></div><div class="line">    <span class="comment">// https://lodash.com/docs#debounce を見てください。</span></div><div class="line">    getAnswer: _.debounce(</div><div class="line">      <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> vm = <span class="keyword">this</span></div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.question.indexOf(<span class="string">'?'</span>) === <span class="number">-1</span>) &#123;</div><div class="line">          vm.answer = <span class="string">'Questions usually contain a question mark. ;-)'</span></div><div class="line">          <span class="keyword">return</span></div><div class="line">        &#125;</div><div class="line">        vm.answer = <span class="string">'Thinking...'</span></div><div class="line">        axios.get(<span class="string">'https://yesno.wtf/api'</span>)</div><div class="line">          .then(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</div><div class="line">            vm.answer = _.capitalize(response.data.answer)</div><div class="line">          &#125;)</div><div class="line">          .catch(<span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</div><div class="line">            vm.answer = <span class="string">'Error! Could not reach the API. '</span> + error</div><div class="line">          &#125;)</div><div class="line">      &#125;,</div><div class="line">      <span class="comment">// ユーザーの入力が終わるのを待つ時間をミリ秒で指定します。</span></div><div class="line">      <span class="number">500</span></div><div class="line">    )</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- ajax ライブラリの豊富なエコシステムや、汎用的なユーティリティ	--&gt;</span></div><div class="line"><span class="comment">&lt;!-- メソッドがたくさんあるので、Vue のコアはそれらを再発明せずに		--&gt;</span></div><div class="line"><span class="comment">&lt;!-- 小さく保たれています。この結果として、慣れ親しんでいるものだけを	--&gt;</span></div><div class="line"><span class="comment">&lt;!-- 使えるような自由さを Vue は持ち合わせています。			--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/axios@0.12.0/dist/axios.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/lodash@4.13.1/lodash.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="keyword">var</span> watchExampleVM = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">el</span>: <span class="string">'#watch-example'</span>,</div><div class="line">  <span class="attr">data</span>: &#123;</div><div class="line">    <span class="attr">question</span>: <span class="string">''</span>,</div><div class="line">    <span class="attr">answer</span>: <span class="string">'I cannot give you an answer until you ask a question!'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">watch</span>: &#123;</div><div class="line">    <span class="comment">// この関数は question が変わるごとに実行されます。</span></div><div class="line">    question: <span class="function"><span class="keyword">function</span> (<span class="params">newQuestion</span>) </span>&#123;</div><div class="line">      <span class="keyword">this</span>.answer = <span class="string">'Waiting for you to stop typing...'</span></div><div class="line">      <span class="keyword">this</span>.getAnswer()</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">methods</span>: &#123;</div><div class="line">    <span class="comment">// _.debounce は特にコストの高い処理の実行を制御するための</span></div><div class="line">    <span class="comment">// lodash の関数です。この場合は、どのくらい頻繁に yesno.wtf/api</span></div><div class="line">    <span class="comment">// へのアクセスすべきかを制限するために、ユーザーの入力が完全に</span></div><div class="line">    <span class="comment">// 終わるのを待ってから ajax リクエストを実行しています。</span></div><div class="line">    <span class="comment">// _.debounce (とその親戚である _.throttle )  についての詳細は</span></div><div class="line">    <span class="comment">// https://lodash.com/docs#debounce を見てください。</span></div><div class="line">    getAnswer: _.debounce(</div><div class="line">      <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.question.indexOf(<span class="string">'?'</span>) === <span class="number">-1</span>) &#123;</div><div class="line">          <span class="keyword">this</span>.answer = <span class="string">'Questions usually contain a question mark. ;-)'</span></div><div class="line">          <span class="keyword">return</span></div><div class="line">        &#125;</div><div class="line">        <span class="keyword">this</span>.answer = <span class="string">'Thinking...'</span></div><div class="line">        <span class="keyword">var</span> vm = <span class="keyword">this</span></div><div class="line">        axios.get(<span class="string">'https://yesno.wtf/api'</span>)</div><div class="line">          .then(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</div><div class="line">            vm.answer = _.capitalize(response.data.answer)</div><div class="line">          &#125;)</div><div class="line">          .catch(<span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</div><div class="line">            vm.answer = <span class="string">'Error! Could not reach the API. '</span> + error</div><div class="line">          &#125;)</div><div class="line">      &#125;,</div><div class="line">      <span class="comment">// ユーザーの入力が終わるのを待つ時間をミリ秒で指定します。</span></div><div class="line">      <span class="number">500</span></div><div class="line">    )</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>結果:</p>
 
 <div id="watch-example" class="demo">
@@ -605,21 +634,11 @@ var watchExampleVM = new Vue({
             <script src="/js/smooth-scroll.min.js"></script>
         
 
-        <!-- main custom script for sidebars, version selects etc. -->
+        <!-- main custom script for sidebars, version selects etc. -->        
+        <script src="/js/css.escape.js"></script>
         <script src="/js/common.js"></script>
 
-        <!-- ga -->
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-          ga('create', 'UA-46852172-1', 'vuejs.org');
-          ga('send', 'pageview');
-        </script>
-
-       <!-- search -->
+        <!-- search -->
         <link href="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="/css/search.css">
         <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>

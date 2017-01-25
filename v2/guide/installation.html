@@ -2,18 +2,18 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-        <title>インストール - vue.js</title>
+        <title>インストール - Vue.js</title>
         <meta charset="utf-8">
         <meta name="description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
         <meta property="og:type" content="article">
-        <meta property="og:title" content="インストール - vue.js">
+        <meta property="og:title" content="インストール - Vue.js">
         <meta property="og:description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
         <meta property="og:image" content="https://vuejs.org/images/logo.png">
 
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:title" content="インストール - vue.js">
+        <meta name="twitter:title" content="インストール - Vue.js">
         <meta name="twitter:description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
         <meta name="twitter:image" content="https://vuejs.org/images/logo.png">
 
@@ -28,6 +28,17 @@
         <!-- this needs to be loaded before guide's inline scripts -->
         <script src="/js/vue.js"></script>
         <script>window.PAGE_TYPE = "guide"</script>
+
+        <!-- ga -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-46852172-1', 'vuejs.org');
+          ga('send', 'pageview');
+        </script>
     </head>
     <body class="docs">        <div id="mobile-bar" >
             <a class="menu-button"></a>
@@ -48,39 +59,43 @@
 <li><a href="/v2/api/" class="nav-link">API</a></li>
 <li><a href="/v2/examples/" class="nav-link">例</a></li>
 <li><a href="/contribution/" class="nav-link">貢献</a></li>
-<li class="nav-dropdown-container">
-  <a class="nav-link">ブログ</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li><a href="https://medium.com/the-vue-point" class="nav-link" target="_blank">英語</a></li>
-    <li><a href="/blog/" class="nav-link">日本語</a></li>
-  </ul>
-</li>
-<li class="nav-dropdown-container community">
-  <a class="nav-link">コミュニティ</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
-    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
-    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット</a></li>
-    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
-    <li><a href="https://vuejsjob.com/?ref=vuejs" class="nav-link" target="_blank">Jobs</a></li>
-  </ul>
-</li>
-
 <li class="nav-dropdown-container ecosystem">
   <a class="nav-link">エコシステム</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://router.vuejs.org/" class="nav-link" target="_blank">vue-router</a></li>
-    <li><a href="https://vuex.vuejs.org/" class="nav-link" target="_blank">vuex</a></li>
-    <li><a href="https://github.com/vuejs/vue-cli" class="nav-link" target="_blank">vue-cli</a></li>
-    <li><a href="https://github.com/vuejs/awesome-vue" class="nav-link" target="_blank">awesome-vue</a></li>
+    <li><h4>ヘルプ</h4></li>
+    <li><ul>
+      <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
+      <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット(公式)</a></li>
+      <li><a href="https://vuejs-jp-slackin.herokuapp.com" class="nav-link" target="_blank">チャット(日本向け)</a></li>
+      <li><a href="https://github.com/vuejs-templates" class="nav-link" target="_blank">テンプレート</a></li>
+    </ul></li>
+    <li><h4>ニュース</h4></li>
+    <li><ul>
+      <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+      <li><a href="https://medium.com/the-vue-point" class="nav-link" target="_blank">ブログ(英語)</a></li>
+      <li><a href="/blog/" class="nav-link" target="_blank">ブログ(日本語訳)</a></li>
+      <li><a href="https://vuejobs.com/?ref=vuejs" class="nav-link" target="_blank">ジョブ(海外)</a></li>
+    </ul></li>
+    <li><h4>コアプラグイン</h4></li>
+    <li><ul>
+      <li><a href="https://router.vuejs.org/" class="nav-link" target="_blank">Vue Router</a></li>
+      <li><a href="https://vuex.vuejs.org/" class="nav-link" target="_blank">Vuex</a></li>
+    </ul></li>
+    <li><h4>リソースリスト</h4></li>
+    <li><ul>
+      <li><a href="https://github.com/vuejs" class="nav-link" target="_blank">公式レポジトリ</a></li>
+      <li><a href="https://github.com/vuejs/awesome-vue" class="nav-link" target="_blank">関連情報</a></li>
+    </ul></li>
   </ul>
 </li>
 
 <li class="nav-dropdown-container language">
   <a class="nav-link">言語</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://vuejs.org/" class="nav-link" target="_blank">英語</a></li>
+    <li><a href="https://vuejs.org/" class="nav-link" target="_blank">English</a></li>
     <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
+    <li><a href="https://ru.vuejs.org/" class="nav-link" target="_blank">Русский</a></li>
+    <li><a href="https://kr.vuejs.org/" class="nav-link" target="_blank">한국어</a></li>
   </ul>
 </li>
 
@@ -103,39 +118,43 @@
 <li><a href="/v2/api/" class="nav-link">API</a></li>
 <li><a href="/v2/examples/" class="nav-link">例</a></li>
 <li><a href="/contribution/" class="nav-link">貢献</a></li>
-<li class="nav-dropdown-container">
-  <a class="nav-link">ブログ</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li><a href="https://medium.com/the-vue-point" class="nav-link" target="_blank">英語</a></li>
-    <li><a href="/blog/" class="nav-link">日本語</a></li>
-  </ul>
-</li>
-<li class="nav-dropdown-container community">
-  <a class="nav-link">コミュニティ</a><span class="arrow"></span>
-  <ul class="nav-dropdown">
-    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
-    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
-    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット</a></li>
-    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
-    <li><a href="https://vuejsjob.com/?ref=vuejs" class="nav-link" target="_blank">Jobs</a></li>
-  </ul>
-</li>
-
 <li class="nav-dropdown-container ecosystem">
   <a class="nav-link">エコシステム</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://router.vuejs.org/" class="nav-link" target="_blank">vue-router</a></li>
-    <li><a href="https://vuex.vuejs.org/" class="nav-link" target="_blank">vuex</a></li>
-    <li><a href="https://github.com/vuejs/vue-cli" class="nav-link" target="_blank">vue-cli</a></li>
-    <li><a href="https://github.com/vuejs/awesome-vue" class="nav-link" target="_blank">awesome-vue</a></li>
+    <li><h4>ヘルプ</h4></li>
+    <li><ul>
+      <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">フォーラム</a></li>
+      <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">チャット(公式)</a></li>
+      <li><a href="https://vuejs-jp-slackin.herokuapp.com" class="nav-link" target="_blank">チャット(日本向け)</a></li>
+      <li><a href="https://github.com/vuejs-templates" class="nav-link" target="_blank">テンプレート</a></li>
+    </ul></li>
+    <li><h4>ニュース</h4></li>
+    <li><ul>
+      <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+      <li><a href="https://medium.com/the-vue-point" class="nav-link" target="_blank">ブログ(英語)</a></li>
+      <li><a href="/blog/" class="nav-link" target="_blank">ブログ(日本語訳)</a></li>
+      <li><a href="https://vuejobs.com/?ref=vuejs" class="nav-link" target="_blank">ジョブ(海外)</a></li>
+    </ul></li>
+    <li><h4>コアプラグイン</h4></li>
+    <li><ul>
+      <li><a href="https://router.vuejs.org/" class="nav-link" target="_blank">Vue Router</a></li>
+      <li><a href="https://vuex.vuejs.org/" class="nav-link" target="_blank">Vuex</a></li>
+    </ul></li>
+    <li><h4>リソースリスト</h4></li>
+    <li><ul>
+      <li><a href="https://github.com/vuejs" class="nav-link" target="_blank">公式レポジトリ</a></li>
+      <li><a href="https://github.com/vuejs/awesome-vue" class="nav-link" target="_blank">関連情報</a></li>
+    </ul></li>
   </ul>
 </li>
 
 <li class="nav-dropdown-container language">
   <a class="nav-link">言語</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://vuejs.org/" class="nav-link" target="_blank">英語</a></li>
+    <li><a href="https://vuejs.org/" class="nav-link" target="_blank">English</a></li>
     <li><a href="https://cn.vuejs.org/" class="nav-link" target="_blank">中文</a></li>
+    <li><a href="https://ru.vuejs.org/" class="nav-link" target="_blank">Русский</a></li>
+    <li><a href="https://kr.vuejs.org/" class="nav-link" target="_blank">한국어</a></li>
   </ul>
 </li>
 
@@ -367,7 +386,7 @@
                 
                 
                 <li>
-                    <a href="/v2/guide/deployment.html" class="sidebar-link">本番環境への配信</a>
+                    <a href="/v2/guide/deployment.html" class="sidebar-link">プロダクション環境への配信のヒント</a>
                 </li>
             
                 
@@ -408,6 +427,16 @@
                 
                 <li>
                     <a href="/v2/guide/ssr.html" class="sidebar-link">サーバサイドレンダリング</a>
+                </li>
+            
+                
+                
+                
+                
+                
+                
+                <li>
+                    <a href="/v2/guide/typescript.html" class="sidebar-link">TypeScript のサポート</a>
                 </li>
             
                 
@@ -491,17 +520,17 @@
 <h2 id="スタンドアロン"><a href="#スタンドアロン" class="headerlink" title="スタンドアロン"></a>スタンドアロン</h2><p>ダウンロードし script タグで読み込んでください。<code>Vue</code> はグローバル変数として登録されます。</p>
 <p class="tip">開発中はプロダクションバージョンを使用しないでください。 警告や一般的な間違いを見逃す可能性があります!</p>
 
-<div id="downloads"><br><a class="button" href="/js/vue.js" download="">開発バージョン</a><span class="light info">警告出力とデバッグモードあり </span><br><br><a class="button" href="/js/vue.min.js" download="">プロダクションバージョン</a><span class="light info">警告出力なし、 24.86kb min+gzip</span><br></div>
+<div id="downloads"><br><a class="button" href="/js/vue.js" download="">開発バージョン</a><span class="light info">警告出力とデバッグモードあり </span><br><br><a class="button" href="/js/vue.min.js" download="">プロダクションバージョン</a><span class="light info">警告出力なし、 25.86kb min+gzip</span><br></div>
 
 <h3 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h3><p>推奨: <a href="https://unpkg.com/vue/dist/vue.min.js" target="_blank" rel="external">unpkg</a> は、npm に公開されるとすぐに最新バージョンが反映されます。<a href="https://unpkg.com/vue/" target="_blank" rel="external">unpkg.com/vue/</a> では npm パッケージのソースも確認することができます。</p>
-<p><a href="https://cdn.jsdelivr.net/vue/2.1.3/vue.min.js" target="_blank" rel="external">jsdelivr</a> または <a href="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.3/vue.min.js" target="_blank" rel="external">cdnjs</a> 上でも利用可能です。(同期に少し時間がかかるため、最新版ではない可能性があります)。</p>
+<p><a href="https://cdn.jsdelivr.net/vue/2.1.10/vue.min.js" target="_blank" rel="external">jsdelivr</a> または <a href="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js" target="_blank" rel="external">cdnjs</a> 上でも利用可能です。(同期に少し時間がかかるため、最新版ではない可能性があります)。</p>
 <h2 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h2><p>Vue.js による大規模アプリケーションを構築するときには、NPM を利用したインストールを推奨しています。 <a href="http://webpack.github.io/" target="_blank" rel="external">Webpack</a> または <a href="http://browserify.org/" target="_blank" rel="external">Browserify</a> のようモジュールハンドラとうまく組み合わせられます。 Vue は<a href="single-file-components.html">単一ファイルコンポーネント</a>を作成するための、付随するツールも提供しています。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># 最新の安定版</span></div><div class="line">$ npm install vue</div></pre></td></tr></table></figure>
 <h3 id="スタンドアロン-vs-ランタイム限定ビルド"><a href="#スタンドアロン-vs-ランタイム限定ビルド" class="headerlink" title="スタンドアロン vs. ランタイム限定ビルド"></a>スタンドアロン vs. ランタイム限定ビルド</h3><p>スタンドアロンビルドとランタイム限定ビルドの2つのビルドが使用可能です。</p>
 <ul>
 <li><p>スタンドアロンビルドはコンパイラを内蔵しており、 <code>template</code> オプションをサポートしています。 <strong>ブラウザの API に依存しているため、サーバサイドレンダリングに使用することはできません。</strong></p>
 </li>
-<li><p>ランタイム限定ビルドは、テンプレートコンパイラを内蔵しておらず、 <code>template</code> オプションはサポートされていません。ランタイム限定ビルドを使用している場合は <code>render</code> オプションのみ使用することが可能ですが、単一ファイルコンポーネントのテンプレートはビルド時に <code>render</code> 関数をプリコンパイルされるので使用可能です。ランタイム限定ビルドは 17.14 kb min+gzip で、スタンドアロンビルドよりも30%軽量です。</p>
+<li><p>ランタイム限定ビルドは、テンプレートコンパイラを内蔵しておらず、 <code>template</code> オプションはサポートされていません。ランタイム限定ビルドを使用している場合は <code>render</code> オプションのみ使用することが可能ですが、単一ファイルコンポーネントのテンプレートはビルド時に <code>render</code> 関数をプリコンパイルされるので使用可能です。ランタイム限定ビルドは 18.01 kb min+gzip で、スタンドアロンビルドよりも30%軽量です。</p>
 </li>
 </ul>
 <p>NPM パッケージはデフォルトで<strong>ランタイム限定</strong>ビルドを出力します。スタンドアロンビルドを使用する場合は、webpack のコンフィグに下記のエイリアスを追加します。</p>
@@ -537,21 +566,11 @@
             <script src="/js/smooth-scroll.min.js"></script>
         
 
-        <!-- main custom script for sidebars, version selects etc. -->
+        <!-- main custom script for sidebars, version selects etc. -->        
+        <script src="/js/css.escape.js"></script>
         <script src="/js/common.js"></script>
 
-        <!-- ga -->
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-          ga('create', 'UA-46852172-1', 'vuejs.org');
-          ga('send', 'pageview');
-        </script>
-
-       <!-- search -->
+        <!-- search -->
         <link href="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="/css/search.css">
         <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>

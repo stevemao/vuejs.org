@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://vuejs.org/"/>
-  <updated>2016-11-28T02:24:16.000Z</updated>
+  <updated>2017-01-24T01:16:15.000Z</updated>
   <id>http://vuejs.org/</id>
   
   <author>
@@ -16,11 +16,59 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>2016年の Vue</title>
+    <link href="http://vuejs.org/2016/12/28/vue-in-2016/"/>
+    <id>http://vuejs.org/2016/12/28/vue-in-2016/</id>
+    <published>2016-12-27T15:32:36.000Z</published>
+    <updated>2017-01-24T01:16:15.000Z</updated>
+    
+    <content type="html">&lt;p&gt;このブログは&lt;a href=&quot;https://medium.com/the-vue-point/vue-in-2016-8df71d98bfb3#.76ezxb9bg&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;こちら&lt;/a&gt;の翻訳ブログです。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*ZJD3llCWveVH9-uUcCjMCw.png&quot; alt=&quot;Google Trends for &amp;quot;vuejs + vue.js&amp;quot;&quot;&gt;&lt;/p&gt;
+&lt;figcaption style=&quot;font-size:14px;text-align:center;&quot;&gt;… 2015年は爆発的な年だと思っていたら！&lt;/figcaption&gt;
+
+&lt;p&gt;2016年ももうすぐ終わりです！ 過去12ヶ月間、&lt;a href=&quot;https://vuejs.org/&quot;&gt;Vue&lt;/a&gt; の成長は一貫して私の期待を上回っています。プロジェクトは比較的ニッチなフレームワークから現場の最大のプレイヤーとしばしば比較されるようになるまでに成長しました。何が起こったのか見てみましょう！&lt;/p&gt;
+&lt;h2 id=&quot;2016年の統計概要&quot;&gt;&lt;a href=&quot;#2016年の統計概要&quot; class=&quot;headerlink&quot; title=&quot;2016年の統計概要&quot;&gt;&lt;/a&gt;2016年の統計概要&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;NPM ダウンロード数: 合計 1,943,567、過去1年間 1,531,217 (2015年の 382,184 から +300 %増)&lt;/li&gt;
+&lt;li&gt;コアリポジトリ GitHub stars 数: 合計 37,664、過去1年間 〜 26,000 (2015年の～ 7,600 から +240 %増)&lt;/li&gt;
+&lt;li&gt;コアリポジトリプルリクエストマージ数: 合計 350 件、過去1年間 258 件 (2015年の 70 件から +268 ％増)&lt;/li&gt;
+&lt;li&gt;vuejs.org ページビュー: 過去1年間 21,424,759 (2015年の 3,761,728 から +470 %増)&lt;/li&gt;
+&lt;li&gt;vuejs.org 月間アクティブユーザー数: 358,405 (2015年の 77,836 から +360 %増）※ユーザーセッションの42％は中国からです。&lt;/li&gt;
+&lt;li&gt;Chrome DevTools extension 週間アクティブユーザー: 84,098 (前年度の統計無)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;トリビア: Vue は現在 GitHub で 10 番目に star が付けられた JavaScript プロジェクトであり、 &lt;a href=&quot;https://docs.google.com/spreadsheets/d/11bGpZq6ixlhrmQnzEUqbgbwTQwQVdtvILjp32vaOKBc/edit#gid=1735042899&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;2016 年では全プロジェクトの中で3位&lt;/a&gt;です (ソースコード以外のプロジェクトを除くと1位)。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;それはただの誇大広告ですか？&quot;&gt;&lt;a href=&quot;#それはただの誇大広告ですか？&quot; class=&quot;headerlink&quot; title=&quot;それはただの誇大広告ですか？&quot;&gt;&lt;/a&gt;それはただの誇大広告ですか？&lt;/h2&gt;&lt;p&gt;決してそんなつもりはありません。Vue は今や3年近く使われており、そして過去2年間で成長曲線はかなり安定しています。私たちは幸せな生産現場のユーザーから多くの肯定的なフィードバックを受けており、また今年はユーザーが Vue の肯定的な経験について詳述した少なくとも2つの Hacker News フロントページの記事がありました。&lt;span style=&quot;background-color: transparent !important; background-image: linear-gradient(to bottom, rgba(219, 249, 229, 1), rgba(219, 249, 229, 1));&quot;&gt;つまり、Vue は”今すぐ切り替えるべき次の光り輝くもの”ではなく、そうなるつもりもありません。その設計目標は UI 開発のパラダイムに革命を起こすことではなく、むしろより多くの人々が web を構築できるようにすることです。&lt;/span&gt;Vue は他の多くの優れたフレームワークからインスピレーションを受けていますが、これらのアイデアを親しみやすく進歩的な方法で組み合わせて公開することでより多くの開発者が利益を得ることができます。なので、単にそれがトレンドだからという理由で切り替える義務を感じることはありません。ですが、あなたがより幸せな開発者になれるかどうかを試してみてください！&lt;/p&gt;
+&lt;h2 id=&quot;独立&quot;&gt;&lt;a href=&quot;#独立&quot; class=&quot;headerlink&quot; title=&quot;独立&quot;&gt;&lt;/a&gt;独立&lt;/h2&gt;&lt;p&gt;3月上旬、私は Vue をフルタイムで独立して働くことに決め、&lt;a href=&quot;https://www.patreon.com/evanyou&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;パトロンキャンペーン&lt;/a&gt;を開始しました。それは、これまでのところ(驚くべきことに)かなり成功しています。マネージャーに報告することなく独立して働くのは初めてのことで、それは非常に解放的な経験でした。良いところは、仕事はもはや仕事のように感じられないことです。私がやるべきことが自分の本当にやりたいことであり、加えて、私はいつどのように働くかを完全にコントロールしているので、自分自身に仕事を強いる必要はないからです。一方、それはまた悪いところもあります。特に新米の親(私には今年は赤ちゃんがいました！)である間は、生活と仕事のバランスを管理することは非常に困難です。このことは私が対処することを学んでいるもので、うまくいけば来年にはもっと良くなるでしょう。しかし全体として、私は以前よりももっと意欲があって充実していると感じており、私はそれら全てを可能としているパトロンの後援者とスポンサー全員に感謝の意を表します。&lt;/p&gt;
+&lt;h2 id=&quot;2-0-のローンチ&quot;&gt;&lt;a href=&quot;#2-0-のローンチ&quot; class=&quot;headerlink&quot; title=&quot;2.0 のローンチ&quot;&gt;&lt;/a&gt;2.0 のローンチ&lt;/h2&gt;&lt;p&gt;2.0 に関する作業は大きな仕事でした。私は長い間それについて考えていましたが、フルタイムへの切り替えのおかげで始められました。完全に異なるコンパイル/レンダリング戦略を利用するために、プロジェクト全体がスクラッチから書き直されました。しかし同時に、以前のバージョンと同じ開発エクスペリエンスと、ほぼ同様の API を維持する必要がありました。これはまた、新しいコアで動かすために vue-router、vuex、およびビルドツールチェーンの周囲のエコシステムをアップグレードし、加えてすべてのドキュメントを更新する必要があることを意味していました。私が予想していたよりもはるかに多くの仕事が判明しました：私は Vue 2.0 の最初のプロトタイプを4月上旬に開始し、&lt;a href=&quot;https://jp.vuejs.org/2016/10/01/here-2.0/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;公式のローンチ&lt;/a&gt;は約6ヶ月後の9月30日でした。新しいリリースでは、新機能とクロス環境の性能により、Vue がより早く、より速く、より強力になりました。振り返って、私たちがやったことを本当に誇りに思います。&lt;/p&gt;
+&lt;h2 id=&quot;個人プロジェクトを超えて&quot;&gt;&lt;a href=&quot;#個人プロジェクトを超えて&quot; class=&quot;headerlink&quot; title=&quot;個人プロジェクトを超えて&quot;&gt;&lt;/a&gt;個人プロジェクトを超えて&lt;/h2&gt;&lt;p&gt;Vue 関連のプロジェクトの範囲が拡大するにつれて、私はコミュニティから多くの素晴らしい貢献者が参加するという幸運にも恵まれました。今日、多くの&lt;a href=&quot;https://github.com/orgs/vuejs/people&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;コアチーム&lt;/a&gt;メンバーがサーバーサイドレンダリングからドキュメンテーション(vuejs.org)、vue-router、vuex、そして公式の TypeScript 統合などのサブプロジェクトに至るまで、プロジェクトのあらゆる側面に積極的に貢献しています。彼らのオープンソースの仕事への熱意と献身に私はいつも恐縮しています。&lt;/p&gt;
+&lt;p&gt;もちろん、設計の議論に参加し、新しい機能を提案し、問題を検討し、バグ修正を提出したことについて、他のコミュニティ貢献者にも同じ感謝が寄せられます。今年はコアリポジトリだけで 258 件のプルリクエストが寄せられ、そのうちかなりの数がコードベースを大幅に改善しています。日々 Vue のエコシステムをより良くしているのは、関係するすべての人々のコンビネーションです。このプロジェクトは皆さんの貢献なしでは今の立ち位置には居なかったでしょう！&lt;/p&gt;
+&lt;h2 id=&quot;将来を見据えて&quot;&gt;&lt;a href=&quot;#将来を見据えて&quot; class=&quot;headerlink&quot; title=&quot;将来を見据えて&quot;&gt;&lt;/a&gt;将来を見据えて&lt;/h2&gt;&lt;p&gt;Vue についてはまだ改善の余地があります。 2017年のリストには次のようなものがあります:&lt;/p&gt;
+&lt;h3 id=&quot;テストストーリーの改善&quot;&gt;&lt;a href=&quot;#テストストーリーの改善&quot; class=&quot;headerlink&quot; title=&quot;テストストーリーの改善&quot;&gt;&lt;/a&gt;テストストーリーの改善&lt;/h3&gt;&lt;p&gt;Twitter のフィードバックに基づくと、多くのユーザーが Vue コンポーネントとアプリケーションのテストに関して十分な情報が無いと感じています。これは改善に集中することを確実にするエリアです。Vue コンポーネントのテストを容易にする公式のテストユーティリティを提供することによって、ドキュメントのより多くのガイダンスを提供することができます。&lt;/p&gt;
+&lt;h3 id=&quot;開発エクスペリエンスのブラッシュアップ&quot;&gt;&lt;a href=&quot;#開発エクスペリエンスのブラッシュアップ&quot; class=&quot;headerlink&quot; title=&quot;開発エクスペリエンスのブラッシュアップ&quot;&gt;&lt;/a&gt;開発エクスペリエンスのブラッシュアップ&lt;/h3&gt;&lt;p&gt;開発中のヒントや警告の改善、サーバサイドレンダリング (SSR) のスタックトレースの改善、DevTools のパフォーマンスプロファイリング、SSR の使用や PWA (Progressive Web Apps) の構築を容易にする CLI テンプレートの開発など、スタック全体の開発経験をさらに磨きたいです。&lt;/p&gt;
+&lt;h3 id=&quot;より良いエコシステムの見つけやすさ&quot;&gt;&lt;a href=&quot;#より良いエコシステムの見つけやすさ&quot; class=&quot;headerlink&quot; title=&quot;より良いエコシステムの見つけやすさ&quot;&gt;&lt;/a&gt;より良いエコシステムの見つけやすさ&lt;/h3&gt;&lt;p&gt;Vue のエコシステムは急速に成長していますが、その結果 &lt;a href=&quot;https://github.com/vuejs/awesome-vue&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;awesome-vue&lt;/a&gt; が肥大化し、ナビゲートや評価が非常に困難になっています。コアチームはこれについて懸命に考えており、ユーザーが高品質のコミュニティプロジェクトを特定するのを支援するプロジェクトに取り組んでいます。それはより高い基準で管理され、含まれる各プロジェクトについてより詳細な情報を提供します。&lt;/p&gt;
+&lt;h3 id=&quot;ネイティブレンダリング&quot;&gt;&lt;a href=&quot;#ネイティブレンダリング&quot; class=&quot;headerlink&quot; title=&quot;ネイティブレンダリング&quot;&gt;&lt;/a&gt;ネイティブレンダリング&lt;/h3&gt;&lt;p&gt;Alibaba の &lt;a href=&quot;http://weex-project.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Weex プロジェクト&lt;/a&gt;との協力関係は、かなりの進歩を遂げました。最初の大きな目標は Vue 2 を Weex のネイティブレンダリングエンジンの上にある実際の JavaScript ランタイムフレームワークにすること、これは最新の0.9.4リリースで完了しました。2017年にはコミュニティからのフィードバックや Alibaba の大規模なプロダクションに基づいて改良された文書や、より良いオンボード体験、そして API の改善が行われます。&lt;/p&gt;
+&lt;h3 id=&quot;新しい-Web-プラットフォーム機能&quot;&gt;&lt;a href=&quot;#新しい-Web-プラットフォーム機能&quot; class=&quot;headerlink&quot; title=&quot;新しい Web プラットフォーム機能&quot;&gt;&lt;/a&gt;新しい Web プラットフォーム機能&lt;/h3&gt;&lt;p&gt;新しい標準が登場し実装されるにつれて、私たちは Vue を大幅に改善する可能性のあるものに注目しています。たとえば、 &lt;a href=&quot;https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ES2015 Proxy&lt;/a&gt; を活用して Vue のリアクティブシステムの現在の制限のいくつかを排除することが可能です。また、Vue コンポーネントをコンパイルしてネイティブなカスタムエレメント (Custom Elements) として配布する可能性も検討しています。現時点では、最大の障害はブラウザの互換性です。サポートされているすべてのブラウザで一貫した動作を保証するため、サポート率が大幅に向上するまでこれらの機能の優先順位を決めることはまずありません。しかし私たちはこれらの新しい標準を認識しており、すでに実験を行っていることを確信しています。その時が来れば、Vue はこれらの新しいプラットフォーム機能を活用するために迅速に進化するでしょう。&lt;/p&gt;
+&lt;h3 id=&quot;閑話休題-私たちは2017年にカンファレンスを開催します！&quot;&gt;&lt;a href=&quot;#閑話休題-私たちは2017年にカンファレンスを開催します！&quot; class=&quot;headerlink&quot; title=&quot;閑話休題: 私たちは2017年にカンファレンスを開催します！&quot;&gt;&lt;/a&gt;閑話休題: 私たちは2017年にカンファレンスを開催します！&lt;/h3&gt;&lt;p&gt;それはまだ初期の計画段階ですが、&lt;a href=&quot;http://conf.vuejs.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;サイトを訪問&lt;/a&gt;してそれを素晴らしいイベントにするのに役立つ&lt;a href=&quot;https://docs.google.com/forms/d/e/1FAIpQLSfiRF9JIpvAcWL7EsnpODIhf_JiNX3PETA_S3XnqmtuG2foQA/viewform&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;調査を受けてください&lt;/a&gt;。さらに、あなたの知識と経験を仲間の Vue ユーザーと分かち合うために&lt;a href=&quot;https://docs.google.com/forms/d/e/1FAIpQLSdtbxBpV0j_zCnELXQuIkeGH8x6gaOWE0J8tTsAdpa0O5MYOw/viewform&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;話をしてください&lt;/a&gt;！&lt;/p&gt;
+&lt;p&gt;もしあなたが Vue に興味があるなら、 &lt;a href=&quot;https://vuejs.org&quot;&gt;公式サイト&lt;/a&gt;をチェックアウトして開始し、そして &lt;a href=&quot;https://twitter.com/vuejs&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Twitter で私たちをフォロー&lt;/a&gt;してください！&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;このブログは&lt;a href=&quot;https://medium.com/the-vue-point/vue-in-2016-8df71d98bfb3#.76ezxb9bg&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;こちら&lt;/a&gt;の翻訳ブログです。&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>vue-resource の引退について</title>
     <link href="http://vuejs.org/2016/11/03/retiring-vue-resource/"/>
     <id>http://vuejs.org/2016/11/03/retiring-vue-resource/</id>
     <published>2016-11-03T14:27:00.000Z</published>
-    <updated>2016-11-28T02:24:16.000Z</updated>
+    <updated>2017-01-24T01:16:15.000Z</updated>
     
     <content type="html">&lt;p&gt;このブログは&lt;a href=&quot;https://medium.com/the-vue-point/retiring-vue-resource-871a82880af4#.33jmtzpgb&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;こちら&lt;/a&gt;の翻訳ブログです。&lt;/p&gt;
 &lt;p&gt;Vue のユーザーとして、皆さんの多くが使用している可能性がある &lt;a href=&quot;https://github.com/vuejs/vue-resource&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;em&gt;vue-resource&lt;/em&gt;&lt;/a&gt; は Vue アプリケーションでの ajax リクエストを処理するためのものです。&lt;br&gt;長い間それは Vue 用の「公式」ajax ライブラリとして考えられてきましたが、本日私たちはそれを公式推奨という状態から引退させました。&lt;/p&gt;
@@ -53,7 +101,7 @@
     <link href="http://vuejs.org/2016/10/01/here-2.0/"/>
     <id>http://vuejs.org/2016/10/01/here-2.0/</id>
     <published>2016-09-30T18:30:00.000Z</published>
-    <updated>2016-11-28T02:24:16.000Z</updated>
+    <updated>2017-01-24T01:16:15.000Z</updated>
     
     <content type="html">&lt;p&gt;このブログは&lt;a href=&quot;https://medium.com/the-vue-point/vue-2-0-is-here-ef1f26acf4b8#.70i8p9m8i&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;こちら&lt;/a&gt;の翻訳ブログです。&lt;/p&gt;
 &lt;p&gt;今日（日本時間:2016/10/1）、私は &lt;a href=&quot;https://github.com/vuejs/vue/releases/tag/v2.0.0&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Vue.js 2.0：Ghost in the Shell（攻殻機動隊）&lt;/a&gt;の公式リリース発表に興奮しています。8つのアルファ、8つのベータ、そして8つの RC（全てが偶然の一致！）の後、Vue.js 2.0 は製品版の準備ができています！公式ガイドは完全に更新され、&lt;a href=&quot;https://vuejs.org/guide/&quot;&gt;vuejs.org/guide&lt;/a&gt; で入手可能です（訳注：日本語版は翻訳作業中です）。遡ること 4 月に 2.0 の作業を開始して以来、&lt;a href=&quot;https://github.com/orgs/vuejs/people&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;コアチーム&lt;/a&gt;は API の設計、バグ修正、ドキュメントおよび Typescript での型付け（そう、npm パッケージで出荷された vue core、vue-router、そして vuex 2.0 はすべて TypeScript での型付けを持っています）に多大な貢献を行いました。そしてコミュニティもまた、API の変更に非常に貴重なフィードバックを提供してくれました。&lt;/p&gt;
@@ -108,7 +156,7 @@
     <link href="http://vuejs.org/2016/04/27/announcing-2.0/"/>
     <id>http://vuejs.org/2016/04/27/announcing-2.0/</id>
     <published>2016-04-27T04:33:00.000Z</published>
-    <updated>2016-11-28T02:24:16.000Z</updated>
+    <updated>2017-01-24T01:16:15.000Z</updated>
     
     <content type="html">&lt;p&gt;本日、多くのエキサイティングな改善と新しい機能を盛り込んだ、 Vue.js 2.0 の最初のパブリックプレビュー (public preview) を発表してゾクゾクしています。何が起こっているのかのぞいてみましょう！&lt;/p&gt;
 &lt;h2 id=&quot;さらにスリム、さらに高速&quot;&gt;&lt;a href=&quot;#さらにスリム、さらに高速&quot; class=&quot;headerlink&quot; title=&quot;さらにスリム、さらに高速&quot;&gt;&lt;/a&gt;さらにスリム、さらに高速&lt;/h2&gt;&lt;p&gt;Vue.js は軽くて速いままでいることに常に焦点を当てて来ましたが、2.0 はさらにそれを推し進めます。レンダリングレイヤは、現在軽量な仮想 DOM 実装 (&lt;a href=&quot;https://github.com/paldepind/snabbdom&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Snabbdom&lt;/a&gt;) に基づいており、初期レンダリング速度とメモリ消費量は大抵のシナリオにおいて 2 〜 4 倍まで改善します(&lt;a href=&quot;https://github.com/vuejs/vue/tree/next/benchmarks&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;これらのベンチマーク&lt;/a&gt;を調べてみてください)。テンプレートから仮想 DOM にするコンパイラとランタイムは分離することができ、そのため、テンプレートをプリコンパイルしたり、ランタイムだけによるあなたのアプリケーションを提供できます。min+gzip されたランタイムは 12 キロバイト未満です (参考として、React 15 は min+gzip で 44 キロバイトです)。また、コンパイラはブラウザ上で動作します。これは、以前と同様に、script タグを差し込むだけでハッキングを開始できることを意味します。ビルドにコンパイラを含めた場合でも、ファイルサイズは 17 キロバイト (min+gzip) にとどまり、現在の 1.x ビルドよりもまだ軽量です。&lt;/p&gt;
@@ -149,7 +197,7 @@
     <link href="http://vuejs.org/2016/03/14/march-update/"/>
     <id>http://vuejs.org/2016/03/14/march-update/</id>
     <published>2016-03-14T09:45:00.000Z</published>
-    <updated>2016-11-28T02:24:16.000Z</updated>
+    <updated>2017-01-24T01:16:15.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;コミュニティの成長&quot;&gt;&lt;a href=&quot;#コミュニティの成長&quot; class=&quot;headerlink&quot; title=&quot;コミュニティの成長&quot;&gt;&lt;/a&gt;コミュニティの成長&lt;/h2&gt;&lt;p&gt;この1年間における Vue の成長は素晴らしいです。今現在、GitHub では 15,000 を超えるスターがあり、npm から 500k を超えるダウンロード、そして Gitter チャンネルでは 2,000 ユーザーを超えています。何よりも、コミュニティによってロンドンで最初の&lt;a href=&quot;http://www.meetup.com/London-Vue-js-Meetup/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ミートアップ&lt;/a&gt;とパリで最初の&lt;a href=&quot;http://www.meetup.com/Vuejs-Paris/?scroll=true&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ミートアップ&lt;/a&gt;がうまく開催されたのは、大変エキサイティングです！ミートアップの主催者である &lt;a href=&quot;https://twitter.com/JackBarham&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Jack&lt;/a&gt;、&lt;a href=&quot;https://twitter.com/onejamesbrowne/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;James&lt;/a&gt; そして &lt;a href=&quot;https://twitter.com/posva/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Eduardo&lt;/a&gt; に大変感謝いたします。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -180,7 +228,7 @@
     <link href="http://vuejs.org/2016/02/06/common-gotchas/"/>
     <id>http://vuejs.org/2016/02/06/common-gotchas/</id>
     <published>2016-02-06T01:00:00.000Z</published>
-    <updated>2016-11-28T02:24:16.000Z</updated>
+    <updated>2017-01-24T01:16:15.000Z</updated>
     
     <content type="html">&lt;p&gt;Vue.js を使い始めたユーザーからたびたび幾つかの種類の質問があります。それらの質問の回答はガイドでどこかに全て言及していますが、落とし穴にはまったときそれらはあまり目ただず、そして見つけるのは難しいです。そこで、この記事では、うまくいけば、無駄な時間を節約できるよう、それらの落とし穴についてまとめたものを紹介します！&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -215,7 +263,7 @@
     <link href="http://vuejs.org/2015/12/28/vue-cli/"/>
     <id>http://vuejs.org/2015/12/28/vue-cli/</id>
     <published>2015-12-27T15:00:00.000Z</published>
-    <updated>2016-11-28T02:24:16.000Z</updated>
+    <updated>2017-01-24T01:16:15.000Z</updated>
     
     <content type="html">&lt;p&gt;最近、React プロジェクトを開始するとき、&lt;a href=&quot;https://medium.com/@ericclemmons/javascript-fatigue-48d4011b6fc4#.chg95e5p6&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ツールの障害を中心に議論&lt;/a&gt; が多くありました。幸いにも Vue.js で、迅速なプロトタイプを開始するために必要な全てのものは、&lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; タグを介して CDN から含まれているため、カバーされている部分があります。しかしながら、それは、実際のアプリケーションを構築したいかではありません。実際のアプリケーションでは、必然的に私たちにモジュール化、トランスパイラ、プリプロセッサ、ホットリロード、リント、そしてテストを得るために一定量のツールが必要になります。これらのツールは大規模プロジェクトの長期的な保守性と生産性のために必要ではありますが、初期のセットアップは大きな痛みをともないます。これが &lt;a href=&quot;https://github.com/vuejs/vue-cli&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;vue-cli&lt;/a&gt; を発表する理由で、シンプルな CLI ツールは独断で電池が付属されたビルドセットアップによって、Vue.js プロジェクトの足場をすぐ整えるのに役立ちます。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -254,7 +302,7 @@
     <link href="http://vuejs.org/2015/10/28/why-no-template-url/"/>
     <id>http://vuejs.org/2015/10/28/why-no-template-url/</id>
     <published>2015-10-28T01:56:00.000Z</published>
-    <updated>2016-11-28T02:24:16.000Z</updated>
+    <updated>2017-01-24T01:16:15.000Z</updated>
     
     <content type="html">&lt;p&gt;もともと Angular を使っていて、Vue に移行した新規ユーザから頻繁に寄せられる質問のひとつに「&lt;code&gt;templateURL&lt;/code&gt; はありますか？」というものがあります。これについてはかなりの回数お答えしてきましたが、このことについて記事を書いた方が良いとわかりました。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -280,7 +328,7 @@
     <link href="http://vuejs.org/2015/10/26/1.0.0-release/"/>
     <id>http://vuejs.org/2015/10/26/1.0.0-release/</id>
     <published>2015-10-26T01:00:00.000Z</published>
-    <updated>2016-11-28T02:24:16.000Z</updated>
+    <updated>2017-01-24T01:16:15.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;こんにちは HN ！ Vue.js に精通していない場合は、より高い概要について、この&lt;a href=&quot;http://blog.evanyou.me/2015/10/25/vuejs-re-introduction/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ブログ記事&lt;/a&gt;を読みたいかもしれません。&lt;/p&gt;
