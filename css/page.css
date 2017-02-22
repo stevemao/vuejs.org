@@ -380,7 +380,7 @@ body.docs #nav {
   border-radius: 15px;
   margin-right: 10px;
   transition: border-color 0.2s ease;
-  background: #fff url("/images/search.png") 8px 5px no-repeat;
+  background: #fff url("../images/search.png") 8px 5px no-repeat;
   background-size: 20px;
   vertical-align: middle !important;
 }
@@ -547,6 +547,7 @@ ul.demo li {
   color: #b9465c;
 }
 .content.guide[class*="migration"] .upgrade-path {
+  margin-top: 2em;
   padding: 2em;
   background: rgba(73,195,140,0.1);
   border-radius: 2px;
@@ -556,6 +557,7 @@ ul.demo li {
 }
 .content.guide[class*="migration"] .upgrade-path > p:last-child {
   margin-bottom: 0;
+  padding-bottom: 0;
 }
 .sidebar {
   position: absolute;

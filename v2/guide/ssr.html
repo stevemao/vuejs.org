@@ -10,7 +10,7 @@
         <meta property="og:type" content="article">
         <meta property="og:title" content="サーバサイドレンダリング - Vue.js">
         <meta property="og:description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
-        <meta property="og:image" content="https://vuejs.org/images/logo.png">
+        <meta property="og:image" content="https://vuejs.org//images/logo.png">
 
         <meta name="twitter:card" content="summary">
         <meta name="twitter:title" content="サーバサイドレンダリング - Vue.js">
@@ -57,7 +57,7 @@
 </li>
 <li><a href="/v2/guide/" class="nav-link current">ガイド</a></li>
 <li><a href="/v2/api/" class="nav-link">API</a></li>
-<li><a href="/v2/examples/" class="nav-link">例</a></li>
+<li><a href="/v2/examples/" class="nav-link">Examples</a></li>
 <li><a href="/contribution/" class="nav-link">貢献</a></li>
 <li class="nav-dropdown-container ecosystem">
   <a class="nav-link">エコシステム</a><span class="arrow"></span>
@@ -116,7 +116,7 @@
 </li>
 <li><a href="/v2/guide/" class="nav-link current">ガイド</a></li>
 <li><a href="/v2/api/" class="nav-link">API</a></li>
-<li><a href="/v2/examples/" class="nav-link">例</a></li>
+<li><a href="/v2/examples/" class="nav-link">Examples</a></li>
 <li><a href="/contribution/" class="nav-link">貢献</a></li>
 <li class="nav-dropdown-container ecosystem">
   <a class="nav-link">エコシステム</a><span class="arrow"></span>
@@ -519,7 +519,7 @@
 <h3 id="SEO"><a href="#SEO" class="headerlink" title="SEO"></a>SEO</h3><p>Google や Bing は、同期的な JavaScript のアプリケーションを上手にインデックスしてくれます。 <em>同期的な</em> というのが重要で、もしあなたのアプリケーションが、ローディングのスピナーから始まり、 Ajax 経由でコンテンツを取得しようとするならば、クローラはローディングの完了を待ってくれないでしょう。</p>
 <p>非同期に取得されるページ上のコンテンツが SEO 上で重要な意味をもつ場合、 SSR が必要になるでしょう。</p>
 <h3 id="低速なインターネット環境"><a href="#低速なインターネット環境" class="headerlink" title="低速なインターネット環境"></a>低速なインターネット環境</h3><p>あなたのサイトを訪れるユーザの中には、低速なインターネット回線を利用する人や、不安定なモバイル回線を利用している人がいるかもしれません。このようなケースでは、基本的なコンテンツを見せるために必要なリクエストを、数、量共に減らしたいと考えるでしょう。</p>
-<p><a href="https://webpack.github.io/docs/code-splitting.html" target="_blank" rel="external"> Webpack のコード分割</a> を利用して、ユーザが単一のページを閲覧するためにアプリケーションの全体をダウンロードしなければならないという事情を解消することもできます。が、サーバサイドで事前に描画された HTML ファイルのダウンロードはそれよりももっと大きな性能を導くことができます。</p>
+<p><a href="https://webpack.js.org/guides/code-splitting-require/" target="_blank" rel="external"> Webpack のコード分割</a>を利用して、ユーザが単一のページを閲覧するためにアプリケーションの全体をダウンロードしなければならないという事情を解消することもできます。が、サーバサイドで事前に描画された HTML ファイルのダウンロードはそれよりももっと大きな性能を導くことができます。</p>
 <h3 id="古い-JavaScript-環境、または-JavaScript-の利用できない環境"><a href="#古い-JavaScript-環境、または-JavaScript-の利用できない環境" class="headerlink" title="古い JavaScript 環境、または JavaScript の利用できない環境"></a>古い JavaScript 環境、または JavaScript の利用できない環境</h3><p>一部の人々やとある地域では、 1998 年から稼働するコンピュータを用いてインターネットにアクセスする、という様なケースも考えられるでしょう。Vue は IE9+ 以上の環境でのみ動作しますが、それよりも古いブラウザ環境にコンテンツを配信したいケースや、ターミナルで <a href="http://lynx.browser.org/" target="_blank" rel="external">Lynx</a> を利用するような、最先端の技術者にコンテンツを配信したいケースなども考えられます。</p>
 <h3 id="SSR-vs-プリレンダリング"><a href="#SSR-vs-プリレンダリング" class="headerlink" title="SSR vs プリレンダリング"></a>SSR vs プリレンダリング</h3><p>もしあなたが 一部の商用ページ(例えば <code>/</code>, <code>/about</code>, <code>/contact</code>, など)の SEO を改善するために、 SSR を調べようとしているなら、 おそらく <strong>プリレンダリング</strong> が代わりに役立つでしょう。 レスポンス発行前に HTML をコンパイルするためにWeb サーバを利用するのに比べ、プリレンダリングは単にビルド時に特定のルートで静的な HTML を生成するだけです。プリレンダリングの利便性は、準備がシンプルな点とフロントエンドを完全に静的な構成で保つことができるという点にあります。</p>
 <p>もし Webpack を使用しているなら、 <a href="https://github.com/chrisvfritz/prerender-spa-plugin" target="_blank" rel="external">prerender-spa-plugin</a> を用いてプリレンダリングの構成を整えることができます。 Vue アプリでの動作も広くテストされていて - 実際のところ、 Vue のコアチームのメンバーが、 prerender-spa-plugin の制作を行っていたりします。</p>
@@ -555,7 +555,7 @@
 <p>サーバサイドレンダリングなしでは次のように見えるはずです:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <h2 id="レスポンスのストリーミング"><a href="#レスポンスのストリーミング" class="headerlink" title="レスポンスのストリーミング"></a>レスポンスのストリーミング</h2><p>Vue は <strong>ストリーム (stream)</strong> への出力もまたサポートしており、ストリーミングをサポートする Web サーバではこちらの方が好まれるかもしれません。ストリーミングを用いることで、描画が完全に終わってからまとめてレスポンスの出力を行うのではなく、 <em>描画の進捗に応じて</em> 出力を行えるようになります。結果として特段のデメリット無く、レスポンス速度を向上させる事ができます。</p>
-<p>上に挙げた例をストリーミングに対応させる場合、 <code>server.get(&#39;*&#39;, ...)</code> ブロックの中身を単純に次の用に書き換えてやれば OK です:</p>
+<p>上に挙げた例をストリーミングに対応させる場合、 <code>server.get(&#39;*&#39;, ...)</code> ブロックの中身を単純に次のように書き換えてやれば OK です:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// レイアウトを2つのHTMLに分割する</span></div><div class="line"><span class="keyword">var</span> layoutSections = layout.split(<span class="string">'&lt;div id="app"&gt;&lt;/div&gt;'</span>)</div><div class="line"><span class="keyword">var</span> preAppHTML = layoutSections[<span class="number">0</span>]</div><div class="line"><span class="keyword">var</span> postAppHTML = layoutSections[<span class="number">1</span>]</div><div class="line"></div><div class="line"><span class="comment">// Get リクエストをハンドル</span></div><div class="line">server.get(<span class="string">'*'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">request, response</span>) </span>&#123;</div><div class="line">  <span class="comment">// ストリームに Vue アプリケーションを書き込む</span></div><div class="line">  <span class="keyword">var</span> stream = renderer.renderToStream(<span class="built_in">require</span>(<span class="string">'./assets/app'</span>)())</div><div class="line"></div><div class="line">  <span class="comment">// アプリケーションによって出力される HTML より前の HTML 内容をレスポンスに書き込む</span></div><div class="line">  response.write(preAppHTML)</div><div class="line"></div><div class="line">  <span class="comment">// 新しい chunk がアプリケーションによって HTML が描画されたら...</span></div><div class="line">  stream.on(<span class="string">'data'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">chunk</span>) </span>&#123;</div><div class="line">    <span class="comment">// その chunk をレスポンスに書き込む</span></div><div class="line">    response.write(chunk)</div><div class="line">  &#125;)</div><div class="line"></div><div class="line">  <span class="comment">// 全ての chunks がアプリケーションによって生成されたら...</span></div><div class="line">  stream.on(<span class="string">'end'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// アプリケーションによって出力される HTML より後の HTML 内容をレスポンスに書き込む</span></div><div class="line">    response.end(postAppHTML)</div><div class="line">  &#125;)</div><div class="line"></div><div class="line">  <span class="comment">// 書き込み中にエラーが発生したら...</span></div><div class="line">  stream.on(<span class="string">'error'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</div><div class="line">    <span class="comment">// コンソールにエラーを書き込み</span></div><div class="line">    <span class="built_in">console</span>.error(error)</div><div class="line">    <span class="comment">// クライアントにエラーを通知する</span></div><div class="line">    <span class="keyword">return</span> response</div><div class="line">      .status(<span class="number">500</span>)</div><div class="line">      .send(<span class="string">'Server Error'</span>)</div><div class="line">  &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>このように、ストリームという新しい概念に触れる場合でも、前の例と比べてもそんなに複雑になるということはありません。私達がすることといえば次の5つです:</p>
 <ol>
