@@ -258,14 +258,8 @@ a.button.white {
 #nav .nav-dropdown-container:hover .nav-dropdown {
   display: block;
 }
-#nav .nav-dropdown-container.community {
-  margin-left: 20px;
-}
 #nav .nav-dropdown-container.language {
   margin-left: 20px;
-}
-#nav .nav-dropdown-container.ecosystem ul.nav-dropdown {
-  width: 160px;
 }
 #nav .nav-dropdown-container .arrow {
   pointer-events: none;
@@ -277,7 +271,6 @@ a.button.white {
   overflow-y: scroll;
   position: absolute;
   top: 100%;
-  width: 124px;
   right: -15px;
   background-color: #fff;
   padding: 10px 0;
@@ -699,14 +692,15 @@ ul.demo li {
   line-height: 1.4em;
 }
 .content.api ul ul,
-.content.api ul p {
-  margin: 0.6em 0;
+.content.api ul p:not(.tip) {
+  padding-bottom: 0;
+  margin: 1.2em 0;
 }
 .content a.button {
   font-size: 0.9em;
   color: #fff;
   margin: 0.2em 0;
-  width: 226px;
+  width: 180px;
   text-align: center;
   padding: 12px 24px;
   display: inline-block;
@@ -740,6 +734,7 @@ ul.demo li {
   margin: 45px 0 0.8em;
   padding-bottom: 0.7em;
   border-bottom: 1px solid #ddd;
+  z-index: -1;
 }
 .content h3 {
   margin: 52px 0 1.2em;
@@ -769,7 +764,7 @@ ul.demo li {
 }
 .content ul,
 .content ol {
-  padding-left: 1em;
+  padding-left: 1.5em;
   position: inherit;
 }
 .content a {
@@ -784,32 +779,37 @@ ul.demo li {
 .content blockquote p {
   font-weight: 600;
   margin-left: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 .content iframe {
   margin: 1em 0;
 }
 .content > table {
-  border: 2px solid $white;
+  border-spacing: 0;
+  border-collapse: collapse;
   margin: 1.2em auto;
-  padding: 1em;
+  padding: 0;
+  display: block;
+  overflow-x: auto;
 }
 .content > table td,
 .content > table th {
-  line-height: 1.6em;
-  padding: 0.5em 1.4em;
+  line-height: 1.5em;
+  padding: 0.4em 0.8em;
   border: none;
-}
-.content > table td {
-  background-color: #fcfcfc;
+  border: 1px solid #ddd;
 }
 .content > table th {
-  background-color: #42b983;
-  color: #fff;
-  padding-top: 0.85em;
-  padding-bottom: 0.85em;
+  font-weight: bold;
   text-align: left;
 }
-.content > table tbody code {
+.content > table th,
+.content > table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+.content > table th code,
+.content > table tr:nth-child(2n) code {
   background-color: #efefef;
 }
 .content p.tip {

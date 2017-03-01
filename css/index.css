@@ -258,14 +258,8 @@ a.button.white {
 #nav .nav-dropdown-container:hover .nav-dropdown {
   display: block;
 }
-#nav .nav-dropdown-container.community {
-  margin-left: 20px;
-}
 #nav .nav-dropdown-container.language {
   margin-left: 20px;
-}
-#nav .nav-dropdown-container.ecosystem ul.nav-dropdown {
-  width: 160px;
 }
 #nav .nav-dropdown-container .arrow {
   pointer-events: none;
@@ -277,7 +271,6 @@ a.button.white {
   overflow-y: scroll;
   position: absolute;
   top: 100%;
-  width: 124px;
   right: -15px;
   background-color: #fff;
   padding: 10px 0;

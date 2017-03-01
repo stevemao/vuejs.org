@@ -34,24 +34,23 @@
     }
   }
 
-  function escapeCharacters (hash) {
+  function parseRawHash (hash) {
     // Remove leading hash
     if (hash.charAt(0) === '#') {
       hash = hash.substr(1)
     }
 
-    return '#' + CSS.escape(hash)
+    // Escape characthers
+    try {
+      hash = decodeURIComponent(hash)
+    } catch (e) {}
+    return CSS.escape(hash)
   }
 
   function initLocationHashFuzzyMatching () {
     var rawHash = window.location.hash
     if (!rawHash) return
-    var hash
-    try {
-      hash = escapeCharacters(decodeURIComponent(rawHash))
-    } catch(e) {
-      hash = escapeCharacters(rawHash)
-    }
+    var hash = parseRawHash(rawHash)
     var hashTarget = document.getElementById(hash)
     if (!hashTarget) {
       var normalizedHash = normalizeHash(hash)
@@ -64,7 +63,7 @@
         if (distanceA > distanceB) return 1
         return 0
       })
-      window.location.hash = encodeURIComponent(possibleHashes[0])
+      window.location.hash = '#' + possibleHashes[0]
     }
 
     function normalizeHash (rawHash) {
@@ -142,8 +141,13 @@
     versionSelect && versionSelect.addEventListener('change', function (e) {
       var version = e.target.value
       var section = window.location.pathname.match(/\/v\d\/(\w+?)\//)[1]
-      if (version === 'SELF') { return }
-      window.location.assign('http://' + (version ? version + '-' : '') + 'jp.vuejs.org/' + section + '/')
+      if (version === 'SELF') return
+      window.location.assign(
+        'http://' +
+        version +
+        (version && '.') +
+        'vuejs.org/' + section + '/'
+      )
     })
   }
 
@@ -209,7 +213,6 @@
       // make links clickable
       allHeaders.forEach(makeHeaderClickable)
 
-      // init smooth scroll
       smoothScroll.init({
         speed: 400,
         offset: 0
