@@ -712,7 +712,7 @@ new Vue({
 })
 </script>
 
-<h3 id="Literal-vs-Dynamic"><a href="#Literal-vs-Dynamic" class="headerlink" title="Literal vs Dynamic"></a>Literal vs Dynamic</h3><p>A common mistake beginners tend to make is attempting to pass down a number using the literal syntax:</p>
+<h3 id="Literal-vs-Dynamic"><a href="#Literal-vs-Dynamic" class="headerlink" title="Literal vs. Dynamic"></a>Literal vs. Dynamic</h3><p>A common mistake beginners tend to make is attempting to pass down a number using the literal syntax:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- this passes down a plain string "1" --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">comp</span> <span class="attr">some-prop</span>=<span class="string">"1"</span>&gt;</span><span class="tag">&lt;/<span class="name">comp</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>However, since this is a literal prop, its value is passed down as a plain string <code>&quot;1&quot;</code> instead of an actual number. If we want to pass down an actual JavaScript number, we need to use <code>v-bind</code> so that its value is evaluated as a JavaScript expression:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- this passes down an actual number --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">comp</span> <span class="attr">v-bind:some-prop</span>=<span class="string">"1"</span>&gt;</span><span class="tag">&lt;/<span class="name">comp</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -783,7 +783,7 @@ Vue.component('button-counter', {
       this.counter += 1
       this.$emit('increment')
     }
-  },
+  }
 })
 new Vue({
   el: '#counter-event-example',
