@@ -324,7 +324,7 @@ a.button.white {
 }
 #header {
   background-color: #fff;
-  height: $heading-inner-height;
+  height: 40px;
   padding: 10px 60px;
   position: relative;
   z-index: 2;
