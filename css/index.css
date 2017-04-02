@@ -362,6 +362,23 @@ body.docs #nav {
 .nav-link.current {
   border-bottom: 3px solid #42b983;
 }
+.nav-link.shop {
+  margin-left: 10px;
+}
+.new-label {
+  position: absolute;
+  top: 3px;
+  left: 110%;
+  background-color: #42b983;
+  color: #fff;
+  line-height: 16px;
+  height: 16px;
+  font-size: 9px;
+  font-weight: bold;
+  font-family: 'Roboto Mono', Monaco, courier, monospace;
+  padding: 1px 4px 0 6px;
+  border-radius: 4px;
+}
 .search-query {
   height: 30px;
   line-height: 30px;
@@ -495,8 +512,12 @@ body.docs #nav {
   color: #7f8c8d;
   font-size: 0.85em;
 }
-.sidebar .main-sponsor a {
+.sidebar .main-sponsor .logo {
+  color: #7f8c8d;
   margin: 10px 0;
+  padding: 10px 0;
+  text-align: center;
+  font-weight: bold;
 }
 .sidebar .main-sponsor img,
 .sidebar .main-sponsor a {
@@ -671,10 +692,12 @@ body {
 }
 #sponsors img {
   transition: all 0.3s ease;
-  filter: contrast(0%);
+  filter: grayscale(100%);
+  opacity: 0.66;
 }
 #sponsors img:hover {
   filter: none;
+  opacity: 1;
 }
 #sponsors a.vip {
   display: block;

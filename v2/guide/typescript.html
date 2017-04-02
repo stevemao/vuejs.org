@@ -98,6 +98,10 @@
   </ul>
 </li>
 
+<li>
+  <a href="https://vue.threadless.com" target="_blank" class="nav-link shop">Shop</a>
+  <span class="new-label">NEW!</span>
+</li>
 
   </ul>
 </div>
@@ -156,18 +160,21 @@
   </ul>
 </li>
 
+<li>
+  <a href="https://vue.threadless.com" target="_blank" class="nav-link shop">Shop</a>
+  <span class="new-label">NEW!</span>
+</li>
 
     </ul>
     <div class="list">
         <div class="main-sponsor">
-            <span>Sponsored By</span><br>
-            <a href="http://www.thedifferenceengine.io/" target="_blank"
-                style="background-color: #f3f3f3; padding: 10px 0">
-                <img src="/images/tde.png">
+            <span>Platinum Sponsor</span><br>
+            <a href="https://stdlib.com" target="_blank" class="logo">
+                <img src="/images/stdlib.png">
             </a>
         </div>
         <a class="become-backer" href="/support-vuejs">
-            Become a Backer
+            Become a Sponsor
         </a>
         <h2>
             Guide
@@ -575,7 +582,7 @@
 <p>We plan to move all official declarations to use ES-style exports in the future. Please see <a href="#Recommended-Configuration">Recommended Configuration</a> below on a future-proof setup.</p>
 <h2 id="Official-Declaration-in-NPM-Packages"><a href="#Official-Declaration-in-NPM-Packages" class="headerlink" title="Official Declaration in NPM Packages"></a>Official Declaration in NPM Packages</h2><p>A static type system can help prevent many potential runtime errors, especially as applications grow. That’s why Vue ships with <a href="https://github.com/vuejs/vue/tree/dev/types" target="_blank" rel="external">official type declarations</a> for <a href="https://www.typescriptlang.org/" target="_blank" rel="external">TypeScript</a> - not only in Vue core, but also for <a href="https://github.com/vuejs/vue-router/tree/dev/types" target="_blank" rel="external">vue-router</a> and <a href="https://github.com/vuejs/vuex/tree/dev/types" target="_blank" rel="external">vuex</a> as well.</p>
 <p>Since these are <a href="https://unpkg.com/vue/types/" target="_blank" rel="external">published on NPM</a>, and the latest TypeScript knows how to resolve type declarations in NPM packages, this means when installed via NPM, you don’t need any additional tooling to use TypeScript with Vue.</p>
-<h2 id="Recommended-Configuration"><a href="#Recommended-Configuration" class="headerlink" title="Recommended Configuration"></a>Recommended Configuration</h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// tsconfig.json</span></div><div class="line">&#123;</div><div class="line">  <span class="string">"compilerOptions"</span>: &#123;</div><div class="line">    <span class="comment">// ... other options omitted</span></div><div class="line">    <span class="string">"allowSyntheticDefaultImports"</span>: <span class="literal">true</span>,</div><div class="line">    <span class="string">"lib"</span>: [</div><div class="line">      <span class="string">"dom"</span>,</div><div class="line">      <span class="string">"es5"</span>,</div><div class="line">      <span class="string">"es2015.Promise"</span></div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Recommended-Configuration"><a href="#Recommended-Configuration" class="headerlink" title="Recommended Configuration"></a>Recommended Configuration</h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// tsconfig.json</span></div><div class="line">&#123;</div><div class="line">  <span class="string">"compilerOptions"</span>: &#123;</div><div class="line">    <span class="comment">// ... other options omitted</span></div><div class="line">    <span class="string">"allowSyntheticDefaultImports"</span>: <span class="literal">true</span>,</div><div class="line">    <span class="string">"lib"</span>: [</div><div class="line">      <span class="string">"dom"</span>,</div><div class="line">      <span class="string">"es5"</span>,</div><div class="line">      <span class="string">"es2015.promise"</span></div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>Note the <code>allowSyntheticDefaultImports</code> option allows us to use the following:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></div></pre></td></tr></table></figure>
 <p>instead of:</p>
